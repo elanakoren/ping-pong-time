@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AEF89D6818B529EF00985020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6718B529EF00985020 /* Foundation.framework */; };
+		AEF89D6A18B529EF00985020 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6918B529EF00985020 /* CoreGraphics.framework */; };
+		AEF89D6C18B529EF00985020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6B18B529EF00985020 /* UIKit.framework */; };
+		AEF89D7218B529EF00985020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEF89D7018B529EF00985020 /* InfoPlist.strings */; };
+		AEF89D7418B529EF00985020 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89D7318B529EF00985020 /* main.m */; };
+		AEF89D7818B529EF00985020 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89D7718B529EF00985020 /* AppDelegate.m */; };
+		AEF89D7A18B529EF00985020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF89D7918B529EF00985020 /* Images.xcassets */; };
+		AEF89D8118B529EF00985020 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D8018B529EF00985020 /* XCTest.framework */; };
+		AEF89D8218B529EF00985020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6718B529EF00985020 /* Foundation.framework */; };
+		AEF89D8318B529EF00985020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6B18B529EF00985020 /* UIKit.framework */; };
+		AEF89D8B18B529EF00985020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEF89D8918B529EF00985020 /* InfoPlist.strings */; };
+		AEF89D8D18B529EF00985020 /* TeenFeedbackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89D8C18B529EF00985020 /* TeenFeedbackTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEF89D8418B529EF00985020 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEF89D5C18B529EF00985020 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEF89D6318B529EF00985020;
+			remoteInfo = TeenFeedback;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AEF89D6418B529EF00985020 /* TeenFeedback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenFeedback.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEF89D6718B529EF00985020 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AEF89D6918B529EF00985020 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AEF89D6B18B529EF00985020 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AEF89D6F18B529EF00985020 /* TeenFeedback-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TeenFeedback-Info.plist"; sourceTree = "<group>"; };
+		AEF89D7118B529EF00985020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AEF89D7318B529EF00985020 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AEF89D7518B529EF00985020 /* TeenFeedback-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TeenFeedback-Prefix.pch"; sourceTree = "<group>"; };
+		AEF89D7618B529EF00985020 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AEF89D7718B529EF00985020 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AEF89D7918B529EF00985020 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AEF89D7F18B529EF00985020 /* TeenFeedbackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeenFeedbackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEF89D8018B529EF00985020 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AEF89D8818B529EF00985020 /* TeenFeedbackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TeenFeedbackTests-Info.plist"; sourceTree = "<group>"; };
+		AEF89D8A18B529EF00985020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AEF89D8C18B529EF00985020 /* TeenFeedbackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeenFeedbackTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEF89D6118B529EF00985020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF89D6A18B529EF00985020 /* CoreGraphics.framework in Frameworks */,
+				AEF89D6C18B529EF00985020 /* UIKit.framework in Frameworks */,
+				AEF89D6818B529EF00985020 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF89D7C18B529EF00985020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF89D8118B529EF00985020 /* XCTest.framework in Frameworks */,
+				AEF89D8318B529EF00985020 /* UIKit.framework in Frameworks */,
+				AEF89D8218B529EF00985020 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AEF89D5B18B529EF00985020 = {
+			isa = PBXGroup;
+			children = (
+				AEF89D6D18B529EF00985020 /* TeenFeedback */,
+				AEF89D8618B529EF00985020 /* TeenFeedbackTests */,
+				AEF89D6618B529EF00985020 /* Frameworks */,
+				AEF89D6518B529EF00985020 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AEF89D6518B529EF00985020 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEF89D6418B529EF00985020 /* TeenFeedback.app */,
+				AEF89D7F18B529EF00985020 /* TeenFeedbackTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEF89D6618B529EF00985020 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEF89D6718B529EF00985020 /* Foundation.framework */,
+				AEF89D6918B529EF00985020 /* CoreGraphics.framework */,
+				AEF89D6B18B529EF00985020 /* UIKit.framework */,
+				AEF89D8018B529EF00985020 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEF89D6D18B529EF00985020 /* TeenFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				AEF89D7618B529EF00985020 /* AppDelegate.h */,
+				AEF89D7718B529EF00985020 /* AppDelegate.m */,
+				AEF89D7918B529EF00985020 /* Images.xcassets */,
+				AEF89D6E18B529EF00985020 /* Supporting Files */,
+			);
+			path = TeenFeedback;
+			sourceTree = "<group>";
+		};
+		AEF89D6E18B529EF00985020 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEF89D6F18B529EF00985020 /* TeenFeedback-Info.plist */,
+				AEF89D7018B529EF00985020 /* InfoPlist.strings */,
+				AEF89D7318B529EF00985020 /* main.m */,
+				AEF89D7518B529EF00985020 /* TeenFeedback-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEF89D8618B529EF00985020 /* TeenFeedbackTests */ = {
+			isa = PBXGroup;
+			children = (
+				AEF89D8C18B529EF00985020 /* TeenFeedbackTests.m */,
+				AEF89D8718B529EF00985020 /* Supporting Files */,
+			);
+			path = TeenFeedbackTests;
+			sourceTree = "<group>";
+		};
+		AEF89D8718B529EF00985020 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEF89D8818B529EF00985020 /* TeenFeedbackTests-Info.plist */,
+				AEF89D8918B529EF00985020 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEF89D6318B529EF00985020 /* TeenFeedback */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEF89D9018B529EF00985020 /* Build configuration list for PBXNativeTarget "TeenFeedback" */;
+			buildPhases = (
+				AEF89D6018B529EF00985020 /* Sources */,
+				AEF89D6118B529EF00985020 /* Frameworks */,
+				AEF89D6218B529EF00985020 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TeenFeedback;
+			productName = TeenFeedback;
+			productReference = AEF89D6418B529EF00985020 /* TeenFeedback.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AEF89D7E18B529EF00985020 /* TeenFeedbackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEF89D9318B529EF00985020 /* Build configuration list for PBXNativeTarget "TeenFeedbackTests" */;
+			buildPhases = (
+				AEF89D7B18B529EF00985020 /* Sources */,
+				AEF89D7C18B529EF00985020 /* Frameworks */,
+				AEF89D7D18B529EF00985020 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEF89D8518B529EF00985020 /* PBXTargetDependency */,
+			);
+			name = TeenFeedbackTests;
+			productName = TeenFeedbackTests;
+			productReference = AEF89D7F18B529EF00985020 /* TeenFeedbackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEF89D5C18B529EF00985020 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = PivotalBeach;
+				TargetAttributes = {
+					AEF89D7E18B529EF00985020 = {
+						TestTargetID = AEF89D6318B529EF00985020;
+					};
+				};
+			};
+			buildConfigurationList = AEF89D5F18B529EF00985020 /* Build configuration list for PBXProject "TeenFeedback" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AEF89D5B18B529EF00985020;
+			productRefGroup = AEF89D6518B529EF00985020 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEF89D6318B529EF00985020 /* TeenFeedback */,
+				AEF89D7E18B529EF00985020 /* TeenFeedbackTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEF89D6218B529EF00985020 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF89D7218B529EF00985020 /* InfoPlist.strings in Resources */,
+				AEF89D7A18B529EF00985020 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF89D7D18B529EF00985020 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF89D8B18B529EF00985020 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEF89D6018B529EF00985020 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF89D7818B529EF00985020 /* AppDelegate.m in Sources */,
+				AEF89D7418B529EF00985020 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF89D7B18B529EF00985020 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF89D8D18B529EF00985020 /* TeenFeedbackTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEF89D8518B529EF00985020 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEF89D6318B529EF00985020 /* TeenFeedback */;
+			targetProxy = AEF89D8418B529EF00985020 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AEF89D7018B529EF00985020 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEF89D7118B529EF00985020 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AEF89D8918B529EF00985020 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEF89D8A18B529EF00985020 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEF89D8E18B529EF00985020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AEF89D8F18B529EF00985020 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEF89D9118B529EF00985020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TeenFeedback/TeenFeedback-Prefix.pch";
+				INFOPLIST_FILE = "TeenFeedback/TeenFeedback-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AEF89D9218B529EF00985020 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TeenFeedback/TeenFeedback-Prefix.pch";
+				INFOPLIST_FILE = "TeenFeedback/TeenFeedback-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AEF89D9418B529EF00985020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TeenFeedback.app/TeenFeedback";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TeenFeedback/TeenFeedback-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TeenFeedbackTests/TeenFeedbackTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AEF89D9518B529EF00985020 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TeenFeedback.app/TeenFeedback";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TeenFeedback/TeenFeedback-Prefix.pch";
+				INFOPLIST_FILE = "TeenFeedbackTests/TeenFeedbackTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEF89D5F18B529EF00985020 /* Build configuration list for PBXProject "TeenFeedback" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEF89D8E18B529EF00985020 /* Debug */,
+				AEF89D8F18B529EF00985020 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEF89D9018B529EF00985020 /* Build configuration list for PBXNativeTarget "TeenFeedback" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEF89D9118B529EF00985020 /* Debug */,
+				AEF89D9218B529EF00985020 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AEF89D9318B529EF00985020 /* Build configuration list for PBXNativeTarget "TeenFeedbackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEF89D9418B529EF00985020 /* Debug */,
+				AEF89D9518B529EF00985020 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEF89D5C18B529EF00985020 /* Project object */;
+}
