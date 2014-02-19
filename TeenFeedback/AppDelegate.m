@@ -15,6 +15,18 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    UIViewController *vc = [[UIViewController alloc] init];
+    
+    self.window.rootViewController = vc;
+    
+    vc.view.backgroundColor = [UIColor redColor];
+    UILabel *label = [[UILabel alloc] initWithFrame:
+                      CGRectMake(0.0f, 0.0f, self.window.bounds.size.width, 80.0f)];
+    label.text = @"Hello World";
+    label.backgroundColor = [UIColor clearColor];
+    [vc.view addSubview:label];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
