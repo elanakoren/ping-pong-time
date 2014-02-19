@@ -7,11 +7,16 @@
 //
 
 #import "AppDelegate.h"
+@interface AppDelegate ()
+@property (nonatomic) int counter;
+@property (nonatomic) UILabel* label;
+@end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.counter = 0;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
@@ -21,14 +26,36 @@
     self.window.rootViewController = vc;
     
     vc.view.backgroundColor = [UIColor redColor];
-    UILabel *label = [[UILabel alloc] initWithFrame:
+    self.label = [[UILabel alloc] initWithFrame:
                       CGRectMake(0.0f, 0.0f, self.window.bounds.size.width, 80.0f)];
-    label.text = @"Hello World";
-    label.backgroundColor = [UIColor clearColor];
-    [vc.view addSubview:label];
+    self.label.text = [NSString stringWithFormat:@"Hello INT: %d", self.counter];
+    self.label.backgroundColor = [UIColor clearColor];
+    [vc.view addSubview:self.label];
     
+    
+    CGRect frame = CGRectMake(0, 100, 200, 30);
+    UIButton *myButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    myButton.frame = frame;
+    myButton.backgroundColor = [UIColor blueColor];
+    [myButton setTitle:@"+1" forState:UIControlStateNormal];
+    [vc.view addSubview:myButton];
+    [myButton addTarget:self
+               action:@selector(aMethod)
+     forControlEvents:UIControlEventTouchUpInside];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+-(void) redraw
+{
+    self.label.text = [NSString stringWithFormat:@"Hello INT: %d", self.counter];
+//    [self.label drawRect:self.label.frame];
+}
+
+-(void) aMethod
+{
+    self.counter += 1;
+    [self redraw];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
