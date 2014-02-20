@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE684F9D18B56CED00501654 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684F9C18B56CED00501654 /* Counter.m */; };
+		AE684F9E18B56CED00501654 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684F9C18B56CED00501654 /* Counter.m */; };
+		AE684FA418B57DA700501654 /* HTAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA118B57DA700501654 /* HTAutocompleteTextField.m */; };
+		AE684FA518B57DA700501654 /* HTAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA118B57DA700501654 /* HTAutocompleteTextField.m */; };
+		AE684FA618B57DA700501654 /* HTEmailAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA318B57DA700501654 /* HTEmailAutocompleteTextField.m */; };
+		AE684FA718B57DA700501654 /* HTEmailAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA318B57DA700501654 /* HTEmailAutocompleteTextField.m */; };
+		AE684FAA18B583F700501654 /* WordSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA918B583F700501654 /* WordSource.m */; };
+		AE684FAB18B583F700501654 /* WordSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA918B583F700501654 /* WordSource.m */; };
 		AEF89D6818B529EF00985020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6718B529EF00985020 /* Foundation.framework */; };
 		AEF89D6A18B529EF00985020 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6918B529EF00985020 /* CoreGraphics.framework */; };
 		AEF89D6C18B529EF00985020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6B18B529EF00985020 /* UIKit.framework */; };
@@ -19,6 +27,9 @@
 		AEF89D8318B529EF00985020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6B18B529EF00985020 /* UIKit.framework */; };
 		AEF89D8B18B529EF00985020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEF89D8918B529EF00985020 /* InfoPlist.strings */; };
 		AEF89D8D18B529EF00985020 /* TeenFeedbackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89D8C18B529EF00985020 /* TeenFeedbackTests.m */; };
+		AEF89DA318B55BC900985020 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89DA218B55BC900985020 /* ViewController.m */; };
+		AEF89DA418B55BC900985020 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89DA218B55BC900985020 /* ViewController.m */; };
+		AEF89DAC18B5633600985020 /* CounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89DAA18B5633600985020 /* CounterTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE684F9B18B56CED00501654 /* Counter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Counter.h; sourceTree = "<group>"; };
+		AE684F9C18B56CED00501654 /* Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
+		AE684FA018B57DA700501654 /* HTAutocompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAutocompleteTextField.h; sourceTree = "<group>"; };
+		AE684FA118B57DA700501654 /* HTAutocompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAutocompleteTextField.m; sourceTree = "<group>"; };
+		AE684FA218B57DA700501654 /* HTEmailAutocompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTEmailAutocompleteTextField.h; sourceTree = "<group>"; };
+		AE684FA318B57DA700501654 /* HTEmailAutocompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEmailAutocompleteTextField.m; sourceTree = "<group>"; };
+		AE684FA818B583F700501654 /* WordSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordSource.h; sourceTree = "<group>"; };
+		AE684FA918B583F700501654 /* WordSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordSource.m; sourceTree = "<group>"; };
 		AEF89D6418B529EF00985020 /* TeenFeedback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenFeedback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF89D6718B529EF00985020 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AEF89D6918B529EF00985020 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +67,9 @@
 		AEF89D8818B529EF00985020 /* TeenFeedbackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TeenFeedbackTests-Info.plist"; sourceTree = "<group>"; };
 		AEF89D8A18B529EF00985020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AEF89D8C18B529EF00985020 /* TeenFeedbackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeenFeedbackTests.m; sourceTree = "<group>"; };
+		AEF89DA118B55BC900985020 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AEF89DA218B55BC900985020 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AEF89DAA18B5633600985020 /* CounterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +96,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE684F9F18B57D8C00501654 /* HT */ = {
+			isa = PBXGroup;
+			children = (
+				AE684FA018B57DA700501654 /* HTAutocompleteTextField.h */,
+				AE684FA118B57DA700501654 /* HTAutocompleteTextField.m */,
+				AE684FA218B57DA700501654 /* HTEmailAutocompleteTextField.h */,
+				AE684FA318B57DA700501654 /* HTEmailAutocompleteTextField.m */,
+			);
+			name = HT;
+			sourceTree = "<group>";
+		};
 		AEF89D5B18B529EF00985020 = {
 			isa = PBXGroup;
 			children = (
@@ -107,10 +140,17 @@
 		AEF89D6D18B529EF00985020 /* TeenFeedback */ = {
 			isa = PBXGroup;
 			children = (
+				AE684F9F18B57D8C00501654 /* HT */,
 				AEF89D7618B529EF00985020 /* AppDelegate.h */,
 				AEF89D7718B529EF00985020 /* AppDelegate.m */,
+				AEF89DA118B55BC900985020 /* ViewController.h */,
+				AEF89DA218B55BC900985020 /* ViewController.m */,
 				AEF89D7918B529EF00985020 /* Images.xcassets */,
 				AEF89D6E18B529EF00985020 /* Supporting Files */,
+				AE684F9B18B56CED00501654 /* Counter.h */,
+				AE684F9C18B56CED00501654 /* Counter.m */,
+				AE684FA818B583F700501654 /* WordSource.h */,
+				AE684FA918B583F700501654 /* WordSource.m */,
 			);
 			path = TeenFeedback;
 			sourceTree = "<group>";
@@ -130,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				AEF89D8C18B529EF00985020 /* TeenFeedbackTests.m */,
+				AEF89DAA18B5633600985020 /* CounterTests.m */,
 				AEF89D8718B529EF00985020 /* Supporting Files */,
 			);
 			path = TeenFeedbackTests;
@@ -239,8 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE684F9D18B56CED00501654 /* Counter.m in Sources */,
+				AEF89DA318B55BC900985020 /* ViewController.m in Sources */,
+				AE684FA618B57DA700501654 /* HTEmailAutocompleteTextField.m in Sources */,
+				AE684FAA18B583F700501654 /* WordSource.m in Sources */,
 				AEF89D7818B529EF00985020 /* AppDelegate.m in Sources */,
 				AEF89D7418B529EF00985020 /* main.m in Sources */,
+				AE684FA418B57DA700501654 /* HTAutocompleteTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +294,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE684F9E18B56CED00501654 /* Counter.m in Sources */,
+				AEF89DAC18B5633600985020 /* CounterTests.m in Sources */,
+				AE684FA718B57DA700501654 /* HTEmailAutocompleteTextField.m in Sources */,
+				AE684FAB18B583F700501654 /* WordSource.m in Sources */,
+				AEF89DA418B55BC900985020 /* ViewController.m in Sources */,
 				AEF89D8D18B529EF00985020 /* TeenFeedbackTests.m in Sources */,
+				AE684FA518B57DA700501654 /* HTAutocompleteTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +493,7 @@
 				AEF89D9218B529EF00985020 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEF89D9318B529EF00985020 /* Build configuration list for PBXNativeTarget "TeenFeedbackTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +502,7 @@
 				AEF89D9518B529EF00985020 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

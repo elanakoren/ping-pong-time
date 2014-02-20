@@ -7,55 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 @interface AppDelegate ()
-@property (nonatomic) int counter;
-@property (nonatomic) UILabel* label;
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.counter = 0;
+    NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
+    [defaults setObject:[NSNumber numberWithInt:0] forKey:@"counter"];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    
-    UIViewController *vc = [[UIViewController alloc] init];
-    
+    UIViewController *vc = [[ViewController alloc] init];
     self.window.rootViewController = vc;
     
-    vc.view.backgroundColor = [UIColor redColor];
-    self.label = [[UILabel alloc] initWithFrame:
-                      CGRectMake(0.0f, 0.0f, self.window.bounds.size.width, 80.0f)];
-    self.label.text = [NSString stringWithFormat:@"Hello INT: %d", self.counter];
-    self.label.backgroundColor = [UIColor clearColor];
-    [vc.view addSubview:self.label];
-    
-    
-    CGRect frame = CGRectMake(0, 100, 200, 30);
-    UIButton *myButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    myButton.frame = frame;
-    myButton.backgroundColor = [UIColor blueColor];
-    [myButton setTitle:@"+1" forState:UIControlStateNormal];
-    [vc.view addSubview:myButton];
-    [myButton addTarget:self
-               action:@selector(aMethod)
-     forControlEvents:UIControlEventTouchUpInside];
     [self.window makeKeyAndVisible];
+    NSLog(@"DidFinishLaunching");
     return YES;
-}
-
--(void) redraw
-{
-    self.label.text = [NSString stringWithFormat:@"Hello INT: %d", self.counter];
-//    [self.label drawRect:self.label.frame];
-}
-
--(void) aMethod
-{
-    self.counter += 1;
-    [self redraw];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

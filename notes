@@ -1,0 +1,13 @@
+    NSString *londonWeatherUrl =
+    @"http://api.openweathermap.org/data/2.5/weather?q=London,uk";
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithURL:[NSURL URLWithString:londonWeatherUrl]
+            completionHandler:^(NSData *data,
+                                NSURLResponse *response,
+                                NSError *error) {
+                // handle response
+                self.label.text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            }] resume];
+
+
