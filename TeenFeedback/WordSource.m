@@ -14,4 +14,9 @@
     return @"Hello";
 }
 
+- (void) canUpdateNow
+{
+    
+}
+
 @end

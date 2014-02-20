@@ -10,5 +10,5 @@
 #import "HTAutocompleteTextField.h"
 
 @interface WordSource : NSObject <HTAutocompleteDataSource>
-
+-(void) canUpdateNow;
 @end

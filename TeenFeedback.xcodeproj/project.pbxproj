@@ -15,6 +15,9 @@
 		AE684FA718B57DA700501654 /* HTEmailAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA318B57DA700501654 /* HTEmailAutocompleteTextField.m */; };
 		AE684FAA18B583F700501654 /* WordSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA918B583F700501654 /* WordSource.m */; };
 		AE684FAB18B583F700501654 /* WordSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA918B583F700501654 /* WordSource.m */; };
+		AE684FAE18B594A800501654 /* FileStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FAD18B594A800501654 /* FileStorage.m */; };
+		AE684FAF18B594A800501654 /* FileStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FAD18B594A800501654 /* FileStorage.m */; };
+		AE684FB118B5958A00501654 /* FileStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FB018B5958A00501654 /* FileStorageTests.m */; };
 		AEF89D6818B529EF00985020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6718B529EF00985020 /* Foundation.framework */; };
 		AEF89D6A18B529EF00985020 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6918B529EF00985020 /* CoreGraphics.framework */; };
 		AEF89D6C18B529EF00985020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6B18B529EF00985020 /* UIKit.framework */; };
@@ -51,6 +54,9 @@
 		AE684FA318B57DA700501654 /* HTEmailAutocompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTEmailAutocompleteTextField.m; sourceTree = "<group>"; };
 		AE684FA818B583F700501654 /* WordSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordSource.h; sourceTree = "<group>"; };
 		AE684FA918B583F700501654 /* WordSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordSource.m; sourceTree = "<group>"; };
+		AE684FAC18B594A800501654 /* FileStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileStorage.h; sourceTree = "<group>"; };
+		AE684FAD18B594A800501654 /* FileStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileStorage.m; sourceTree = "<group>"; };
+		AE684FB018B5958A00501654 /* FileStorageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileStorageTests.m; sourceTree = "<group>"; };
 		AEF89D6418B529EF00985020 /* TeenFeedback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenFeedback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF89D6718B529EF00985020 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AEF89D6918B529EF00985020 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -151,6 +157,8 @@
 				AE684F9C18B56CED00501654 /* Counter.m */,
 				AE684FA818B583F700501654 /* WordSource.h */,
 				AE684FA918B583F700501654 /* WordSource.m */,
+				AE684FAC18B594A800501654 /* FileStorage.h */,
+				AE684FAD18B594A800501654 /* FileStorage.m */,
 			);
 			path = TeenFeedback;
 			sourceTree = "<group>";
@@ -171,6 +179,7 @@
 			children = (
 				AEF89D8C18B529EF00985020 /* TeenFeedbackTests.m */,
 				AEF89DAA18B5633600985020 /* CounterTests.m */,
+				AE684FB018B5958A00501654 /* FileStorageTests.m */,
 				AEF89D8718B529EF00985020 /* Supporting Files */,
 			);
 			path = TeenFeedbackTests;
@@ -285,6 +294,7 @@
 				AE684FA618B57DA700501654 /* HTEmailAutocompleteTextField.m in Sources */,
 				AE684FAA18B583F700501654 /* WordSource.m in Sources */,
 				AEF89D7818B529EF00985020 /* AppDelegate.m in Sources */,
+				AE684FAE18B594A800501654 /* FileStorage.m in Sources */,
 				AEF89D7418B529EF00985020 /* main.m in Sources */,
 				AE684FA418B57DA700501654 /* HTAutocompleteTextField.m in Sources */,
 			);
@@ -299,6 +309,8 @@
 				AE684FA718B57DA700501654 /* HTEmailAutocompleteTextField.m in Sources */,
 				AE684FAB18B583F700501654 /* WordSource.m in Sources */,
 				AEF89DA418B55BC900985020 /* ViewController.m in Sources */,
+				AE684FAF18B594A800501654 /* FileStorage.m in Sources */,
+				AE684FB118B5958A00501654 /* FileStorageTests.m in Sources */,
 				AEF89D8D18B529EF00985020 /* TeenFeedbackTests.m in Sources */,
 				AE684FA518B57DA700501654 /* HTAutocompleteTextField.m in Sources */,
 			);
