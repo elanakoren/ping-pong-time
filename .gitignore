@@ -1,0 +1,4 @@
+*.xcheckout
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/

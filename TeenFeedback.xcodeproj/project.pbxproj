@@ -7,20 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE00584A18B7D06C00431C00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6B18B529EF00985020 /* UIKit.framework */; };
+		AE00584B18B7D06C00431C00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6718B529EF00985020 /* Foundation.framework */; };
+		AE00584C18B7D06C00431C00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6918B529EF00985020 /* CoreGraphics.framework */; };
+		AE00585218B7D06C00431C00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE00585018B7D06C00431C00 /* InfoPlist.strings */; };
+		AE00585418B7D06C00431C00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE00585318B7D06C00431C00 /* main.m */; };
+		AE00585818B7D06C00431C00 /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE00585718B7D06C00431C00 /* Cedar-iOS.framework */; };
+		AE00585F18B7D10900431C00 /* CounterSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE00585E18B7D10900431C00 /* CounterSpec.mm */; };
+		AE00586118B7D25E00431C00 /* FakeUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FB318B6798B00501654 /* FakeUserDefaults.m */; };
+		AE00586218B7D27200431C00 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684F9C18B56CED00501654 /* Counter.m */; };
+		AE00586418B7D2CC00431C00 /* FileStorageSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE00586318B7D2CC00431C00 /* FileStorageSpec.mm */; };
+		AE00586518B7D2D300431C00 /* FileStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FAD18B594A800501654 /* FileStorage.m */; };
 		AE684F9D18B56CED00501654 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684F9C18B56CED00501654 /* Counter.m */; };
-		AE684F9E18B56CED00501654 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684F9C18B56CED00501654 /* Counter.m */; };
 		AE684FA418B57DA700501654 /* HTAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA118B57DA700501654 /* HTAutocompleteTextField.m */; };
-		AE684FA518B57DA700501654 /* HTAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA118B57DA700501654 /* HTAutocompleteTextField.m */; };
 		AE684FA618B57DA700501654 /* HTEmailAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA318B57DA700501654 /* HTEmailAutocompleteTextField.m */; };
-		AE684FA718B57DA700501654 /* HTEmailAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA318B57DA700501654 /* HTEmailAutocompleteTextField.m */; };
 		AE684FAA18B583F700501654 /* WordSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA918B583F700501654 /* WordSource.m */; };
-		AE684FAB18B583F700501654 /* WordSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA918B583F700501654 /* WordSource.m */; };
 		AE684FAE18B594A800501654 /* FileStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FAD18B594A800501654 /* FileStorage.m */; };
-		AE684FAF18B594A800501654 /* FileStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FAD18B594A800501654 /* FileStorage.m */; };
-		AE684FB118B5958A00501654 /* FileStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FB018B5958A00501654 /* FileStorageTests.m */; };
-		AE684FB518B6798B00501654 /* FakeUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FB318B6798B00501654 /* FakeUserDefaults.m */; };
 		AE684FC318B6C38900501654 /* SettingsControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FC218B6C38900501654 /* SettingsControllerViewController.m */; };
-		AE684FC418B6C38900501654 /* SettingsControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FC218B6C38900501654 /* SettingsControllerViewController.m */; };
 		AEF89D6818B529EF00985020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6718B529EF00985020 /* Foundation.framework */; };
 		AEF89D6A18B529EF00985020 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6918B529EF00985020 /* CoreGraphics.framework */; };
 		AEF89D6C18B529EF00985020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6B18B529EF00985020 /* UIKit.framework */; };
@@ -28,27 +31,19 @@
 		AEF89D7418B529EF00985020 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89D7318B529EF00985020 /* main.m */; };
 		AEF89D7818B529EF00985020 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89D7718B529EF00985020 /* AppDelegate.m */; };
 		AEF89D7A18B529EF00985020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF89D7918B529EF00985020 /* Images.xcassets */; };
-		AEF89D8118B529EF00985020 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D8018B529EF00985020 /* XCTest.framework */; };
-		AEF89D8218B529EF00985020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6718B529EF00985020 /* Foundation.framework */; };
-		AEF89D8318B529EF00985020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6B18B529EF00985020 /* UIKit.framework */; };
-		AEF89D8B18B529EF00985020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEF89D8918B529EF00985020 /* InfoPlist.strings */; };
-		AEF89D8D18B529EF00985020 /* TeenFeedbackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89D8C18B529EF00985020 /* TeenFeedbackTests.m */; };
 		AEF89DA318B55BC900985020 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89DA218B55BC900985020 /* ViewController.m */; };
-		AEF89DA418B55BC900985020 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89DA218B55BC900985020 /* ViewController.m */; };
-		AEF89DAC18B5633600985020 /* CounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89DAA18B5633600985020 /* CounterTests.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		AEF89D8418B529EF00985020 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AEF89D5C18B529EF00985020 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AEF89D6318B529EF00985020;
-			remoteInfo = TeenFeedback;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		AE00584918B7D06C00431C00 /* Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Specs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE00584F18B7D06C00431C00 /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
+		AE00585118B7D06C00431C00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AE00585318B7D06C00431C00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AE00585518B7D06C00431C00 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
+		AE00585618B7D06C00431C00 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		AE00585718B7D06C00431C00 /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
+		AE00585E18B7D10900431C00 /* CounterSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CounterSpec.mm; sourceTree = "<group>"; };
+		AE00586318B7D2CC00431C00 /* FileStorageSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FileStorageSpec.mm; sourceTree = "<group>"; };
 		AE684F9B18B56CED00501654 /* Counter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Counter.h; sourceTree = "<group>"; };
 		AE684F9C18B56CED00501654 /* Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
 		AE684FA018B57DA700501654 /* HTAutocompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAutocompleteTextField.h; sourceTree = "<group>"; };
@@ -59,9 +54,8 @@
 		AE684FA918B583F700501654 /* WordSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordSource.m; sourceTree = "<group>"; };
 		AE684FAC18B594A800501654 /* FileStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileStorage.h; sourceTree = "<group>"; };
 		AE684FAD18B594A800501654 /* FileStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileStorage.m; sourceTree = "<group>"; };
-		AE684FB018B5958A00501654 /* FileStorageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileStorageTests.m; sourceTree = "<group>"; };
-		AE684FB218B6798B00501654 /* FakeUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeUserDefaults.h; sourceTree = "<group>"; };
-		AE684FB318B6798B00501654 /* FakeUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeUserDefaults.m; sourceTree = "<group>"; };
+		AE684FB218B6798B00501654 /* FakeUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FakeUserDefaults.h; path = ../TeenFeedback/FakeUserDefaults.h; sourceTree = "<group>"; };
+		AE684FB318B6798B00501654 /* FakeUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FakeUserDefaults.m; path = ../TeenFeedback/FakeUserDefaults.m; sourceTree = "<group>"; };
 		AE684FC118B6C38900501654 /* SettingsControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsControllerViewController.h; sourceTree = "<group>"; };
 		AE684FC218B6C38900501654 /* SettingsControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsControllerViewController.m; sourceTree = "<group>"; };
 		AEF89D6418B529EF00985020 /* TeenFeedback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenFeedback.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,17 +69,23 @@
 		AEF89D7618B529EF00985020 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AEF89D7718B529EF00985020 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AEF89D7918B529EF00985020 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AEF89D7F18B529EF00985020 /* TeenFeedbackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeenFeedbackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF89D8018B529EF00985020 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		AEF89D8818B529EF00985020 /* TeenFeedbackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TeenFeedbackTests-Info.plist"; sourceTree = "<group>"; };
-		AEF89D8A18B529EF00985020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AEF89D8C18B529EF00985020 /* TeenFeedbackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeenFeedbackTests.m; sourceTree = "<group>"; };
 		AEF89DA118B55BC900985020 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AEF89DA218B55BC900985020 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AEF89DAA18B5633600985020 /* CounterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AE00584618B7D06C00431C00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE00584C18B7D06C00431C00 /* CoreGraphics.framework in Frameworks */,
+				AE00584A18B7D06C00431C00 /* UIKit.framework in Frameworks */,
+				AE00585818B7D06C00431C00 /* Cedar-iOS.framework in Frameworks */,
+				AE00584B18B7D06C00431C00 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEF89D6118B529EF00985020 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -96,19 +96,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEF89D7C18B529EF00985020 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AEF89D8118B529EF00985020 /* XCTest.framework in Frameworks */,
-				AEF89D8318B529EF00985020 /* UIKit.framework in Frameworks */,
-				AEF89D8218B529EF00985020 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE00584D18B7D06C00431C00 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				AE00586018B7D21800431C00 /* HelperObjects */,
+				AE00585618B7D06C00431C00 /* Rakefile */,
+				AE00585718B7D06C00431C00 /* Cedar-iOS.framework */,
+				AE00584E18B7D06C00431C00 /* Supporting Files */,
+				AE00585E18B7D10900431C00 /* CounterSpec.mm */,
+				AE00586318B7D2CC00431C00 /* FileStorageSpec.mm */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		AE00584E18B7D06C00431C00 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE00584F18B7D06C00431C00 /* Specs-Info.plist */,
+				AE00585018B7D06C00431C00 /* InfoPlist.strings */,
+				AE00585318B7D06C00431C00 /* main.m */,
+				AE00585518B7D06C00431C00 /* Specs-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE00586018B7D21800431C00 /* HelperObjects */ = {
+			isa = PBXGroup;
+			children = (
+				AE684FB218B6798B00501654 /* FakeUserDefaults.h */,
+				AE684FB318B6798B00501654 /* FakeUserDefaults.m */,
+			);
+			name = HelperObjects;
+			sourceTree = "<group>";
+		};
 		AE684F9F18B57D8C00501654 /* HT */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				AEF89D6D18B529EF00985020 /* TeenFeedback */,
-				AEF89D8618B529EF00985020 /* TeenFeedbackTests */,
+				AE00584D18B7D06C00431C00 /* Specs */,
 				AEF89D6618B529EF00985020 /* Frameworks */,
 				AEF89D6518B529EF00985020 /* Products */,
 			);
@@ -134,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				AEF89D6418B529EF00985020 /* TeenFeedback.app */,
-				AEF89D7F18B529EF00985020 /* TeenFeedbackTests.xctest */,
+				AE00584918B7D06C00431C00 /* Specs.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,11 +186,9 @@
 				AE684F9B18B56CED00501654 /* Counter.h */,
 				AE684F9C18B56CED00501654 /* Counter.m */,
 				AE684FA818B583F700501654 /* WordSource.h */,
+				AE684FAD18B594A800501654 /* FileStorage.m */,
 				AE684FA918B583F700501654 /* WordSource.m */,
 				AE684FAC18B594A800501654 /* FileStorage.h */,
-				AE684FAD18B594A800501654 /* FileStorage.m */,
-				AE684FB218B6798B00501654 /* FakeUserDefaults.h */,
-				AE684FB318B6798B00501654 /* FakeUserDefaults.m */,
 				AE684FC118B6C38900501654 /* SettingsControllerViewController.h */,
 				AE684FC218B6C38900501654 /* SettingsControllerViewController.m */,
 			);
@@ -185,29 +206,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AEF89D8618B529EF00985020 /* TeenFeedbackTests */ = {
-			isa = PBXGroup;
-			children = (
-				AEF89D8C18B529EF00985020 /* TeenFeedbackTests.m */,
-				AEF89DAA18B5633600985020 /* CounterTests.m */,
-				AE684FB018B5958A00501654 /* FileStorageTests.m */,
-				AEF89D8718B529EF00985020 /* Supporting Files */,
-			);
-			path = TeenFeedbackTests;
-			sourceTree = "<group>";
-		};
-		AEF89D8718B529EF00985020 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AEF89D8818B529EF00985020 /* TeenFeedbackTests-Info.plist */,
-				AEF89D8918B529EF00985020 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AE00584818B7D06C00431C00 /* Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE00585D18B7D06C00431C00 /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildPhases = (
+				AE00584518B7D06C00431C00 /* Sources */,
+				AE00584618B7D06C00431C00 /* Frameworks */,
+				AE00584718B7D06C00431C00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Specs;
+			productName = Specs;
+			productReference = AE00584918B7D06C00431C00 /* Specs.app */;
+			productType = "com.apple.product-type.application";
+		};
 		AEF89D6318B529EF00985020 /* TeenFeedback */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEF89D9018B529EF00985020 /* Build configuration list for PBXNativeTarget "TeenFeedback" */;
@@ -225,24 +243,6 @@
 			productReference = AEF89D6418B529EF00985020 /* TeenFeedback.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AEF89D7E18B529EF00985020 /* TeenFeedbackTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AEF89D9318B529EF00985020 /* Build configuration list for PBXNativeTarget "TeenFeedbackTests" */;
-			buildPhases = (
-				AEF89D7B18B529EF00985020 /* Sources */,
-				AEF89D7C18B529EF00985020 /* Frameworks */,
-				AEF89D7D18B529EF00985020 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AEF89D8518B529EF00985020 /* PBXTargetDependency */,
-			);
-			name = TeenFeedbackTests;
-			productName = TeenFeedbackTests;
-			productReference = AEF89D7F18B529EF00985020 /* TeenFeedbackTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -251,11 +251,6 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = PivotalBeach;
-				TargetAttributes = {
-					AEF89D7E18B529EF00985020 = {
-						TestTargetID = AEF89D6318B529EF00985020;
-					};
-				};
 			};
 			buildConfigurationList = AEF89D5F18B529EF00985020 /* Build configuration list for PBXProject "TeenFeedback" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -270,12 +265,20 @@
 			projectRoot = "";
 			targets = (
 				AEF89D6318B529EF00985020 /* TeenFeedback */,
-				AEF89D7E18B529EF00985020 /* TeenFeedbackTests */,
+				AE00584818B7D06C00431C00 /* Specs */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AE00584718B7D06C00431C00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE00585218B7D06C00431C00 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEF89D6218B529EF00985020 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,17 +288,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEF89D7D18B529EF00985020 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AEF89D8B18B529EF00985020 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AE00584518B7D06C00431C00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE00586218B7D27200431C00 /* Counter.m in Sources */,
+				AE00586118B7D25E00431C00 /* FakeUserDefaults.m in Sources */,
+				AE00585418B7D06C00431C00 /* main.m in Sources */,
+				AE00586518B7D2D300431C00 /* FileStorage.m in Sources */,
+				AE00586418B7D2CC00431C00 /* FileStorageSpec.mm in Sources */,
+				AE00585F18B7D10900431C00 /* CounterSpec.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEF89D6018B529EF00985020 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -312,35 +320,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEF89D7B18B529EF00985020 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AE684F9E18B56CED00501654 /* Counter.m in Sources */,
-				AEF89DAC18B5633600985020 /* CounterTests.m in Sources */,
-				AE684FA718B57DA700501654 /* HTEmailAutocompleteTextField.m in Sources */,
-				AE684FAB18B583F700501654 /* WordSource.m in Sources */,
-				AEF89DA418B55BC900985020 /* ViewController.m in Sources */,
-				AE684FAF18B594A800501654 /* FileStorage.m in Sources */,
-				AE684FC418B6C38900501654 /* SettingsControllerViewController.m in Sources */,
-				AE684FB118B5958A00501654 /* FileStorageTests.m in Sources */,
-				AE684FB518B6798B00501654 /* FakeUserDefaults.m in Sources */,
-				AEF89D8D18B529EF00985020 /* TeenFeedbackTests.m in Sources */,
-				AE684FA518B57DA700501654 /* HTAutocompleteTextField.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		AEF89D8518B529EF00985020 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AEF89D6318B529EF00985020 /* TeenFeedback */;
-			targetProxy = AEF89D8418B529EF00985020 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
+		AE00585018B7D06C00431C00 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE00585118B7D06C00431C00 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		AEF89D7018B529EF00985020 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -349,17 +339,58 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		AEF89D8918B529EF00985020 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AEF89D8A18B529EF00985020 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AE00585B18B7D06C00431C00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/pivotal/workspace/ping-pong-time/Specs/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AE00585C18B7D06C00431C00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/pivotal/workspace/ping-pong-time/Specs/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		AEF89D8E18B529EF00985020 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -458,51 +489,17 @@
 			};
 			name = Release;
 		};
-		AEF89D9418B529EF00985020 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TeenFeedback.app/TeenFeedback";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TeenFeedback/TeenFeedback-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "TeenFeedbackTests/TeenFeedbackTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		AEF89D9518B529EF00985020 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TeenFeedback.app/TeenFeedback";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TeenFeedback/TeenFeedback-Prefix.pch";
-				INFOPLIST_FILE = "TeenFeedbackTests/TeenFeedbackTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AE00585D18B7D06C00431C00 /* Build configuration list for PBXNativeTarget "Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE00585B18B7D06C00431C00 /* Debug */,
+				AE00585C18B7D06C00431C00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		AEF89D5F18B529EF00985020 /* Build configuration list for PBXProject "TeenFeedback" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -517,15 +514,6 @@
 			buildConfigurations = (
 				AEF89D9118B529EF00985020 /* Debug */,
 				AEF89D9218B529EF00985020 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AEF89D9318B529EF00985020 /* Build configuration list for PBXNativeTarget "TeenFeedbackTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AEF89D9418B529EF00985020 /* Debug */,
-				AEF89D9518B529EF00985020 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

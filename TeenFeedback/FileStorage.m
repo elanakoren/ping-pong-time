@@ -27,9 +27,6 @@
     } else {
         array = [NSArray array];
     }
-    NSLog(@"----------------");
-    NSLog([array componentsJoinedByString:@","]);
-    NSLog(@"----------------");
     return array;
 }
 
