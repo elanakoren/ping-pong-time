@@ -8,12 +8,10 @@ SPEC_BEGIN(FileStorageSpec)
 describe(@"FileStorage", ^{
     __block FileStorage *fileStorage;
     __block NSString *filename;
-    __block NSString *documentPath;
-    __block NSArray *searchPaths;
 
     beforeEach(^{
-        searchPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        documentPath = [searchPaths objectAtIndex:0];
+        NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentPath = [searchPaths objectAtIndex:0];
         filename = [documentPath stringByAppendingPathComponent:@"foo.txt"];
         fileStorage = [[FileStorage alloc] initWithFilename:filename];
     });
