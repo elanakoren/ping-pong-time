@@ -90,9 +90,11 @@
                 NSError *e = nil;
                 NSDictionary * returnDictionary;
                 returnDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&e];
-                
+                NSMutableDictionary *dict = [@{@"key": error} mutableCopy];
+                dict[@"key"] = error;
+                NSArray *array = @[@"hello", @"goodbye"];
                 if ([ returnDictionary objectForKey:@"error"] != nil) {
-                    self.statusLabel = [returnDictionary objectForKey:@"error"];
+                    self.statusLabel.text = [returnDictionary objectForKey:@"error"];
                 } else if ([returnDictionary objectForKey:@"name"] != nil) {
                     self.statusLabel.text = @"";
                     self.textField.text = [returnDictionary objectForKey:@"name"];
