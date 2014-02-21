@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "SettingsControllerViewController.h"
+#import "SettingsViewController.h"
 @interface AppDelegate ()
 @end
 
@@ -22,7 +22,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     UIViewController *vc = [[ViewController alloc] init];
-    UIViewController *vc2 = [[SettingsControllerViewController alloc] init];
+    UIViewController *vc2 = [[SettingsViewController alloc] init];
     
     UIImage* anImage = [UIImage imageNamed:@"Foo"];
     UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:anImage tag:0];

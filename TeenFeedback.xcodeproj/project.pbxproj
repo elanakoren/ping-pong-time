@@ -18,12 +18,18 @@
 		AE00586218B7D27200431C00 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684F9C18B56CED00501654 /* Counter.m */; };
 		AE00586418B7D2CC00431C00 /* FileStorageSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE00586318B7D2CC00431C00 /* FileStorageSpec.mm */; };
 		AE00586518B7D2D300431C00 /* FileStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FAD18B594A800501654 /* FileStorage.m */; };
+		AE00586718B7E24100431C00 /* SettingsViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE00586618B7E24100431C00 /* SettingsViewControllerSpec.mm */; };
+		AE00586918B7E34400431C00 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE00586818B7E34400431C00 /* SettingsViewController.xib */; };
+		AE00586A18B7E34400431C00 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE00586818B7E34400431C00 /* SettingsViewController.xib */; };
+		AE00586B18B7E5B600431C00 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FC218B6C38900501654 /* SettingsViewController.m */; };
+		AE00587618B7EC7200431C00 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE00587518B7EC7200431C00 /* APIClient.m */; };
+		AE00587718B7EC7200431C00 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE00587518B7EC7200431C00 /* APIClient.m */; };
 		AE684F9D18B56CED00501654 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684F9C18B56CED00501654 /* Counter.m */; };
 		AE684FA418B57DA700501654 /* HTAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA118B57DA700501654 /* HTAutocompleteTextField.m */; };
 		AE684FA618B57DA700501654 /* HTEmailAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA318B57DA700501654 /* HTEmailAutocompleteTextField.m */; };
 		AE684FAA18B583F700501654 /* WordSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA918B583F700501654 /* WordSource.m */; };
 		AE684FAE18B594A800501654 /* FileStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FAD18B594A800501654 /* FileStorage.m */; };
-		AE684FC318B6C38900501654 /* SettingsControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FC218B6C38900501654 /* SettingsControllerViewController.m */; };
+		AE684FC318B6C38900501654 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FC218B6C38900501654 /* SettingsViewController.m */; };
 		AEF89D6818B529EF00985020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6718B529EF00985020 /* Foundation.framework */; };
 		AEF89D6A18B529EF00985020 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6918B529EF00985020 /* CoreGraphics.framework */; };
 		AEF89D6C18B529EF00985020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6B18B529EF00985020 /* UIKit.framework */; };
@@ -44,6 +50,11 @@
 		AE00585718B7D06C00431C00 /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
 		AE00585E18B7D10900431C00 /* CounterSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CounterSpec.mm; sourceTree = "<group>"; };
 		AE00586318B7D2CC00431C00 /* FileStorageSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FileStorageSpec.mm; sourceTree = "<group>"; };
+		AE00586618B7E24100431C00 /* SettingsViewControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SettingsViewControllerSpec.mm; sourceTree = "<group>"; };
+		AE00586818B7E34400431C00 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		AE00587418B7EC7200431C00 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		AE00587518B7EC7200431C00 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		AE005D5718B809D800431C00 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		AE684F9B18B56CED00501654 /* Counter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Counter.h; sourceTree = "<group>"; };
 		AE684F9C18B56CED00501654 /* Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
 		AE684FA018B57DA700501654 /* HTAutocompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAutocompleteTextField.h; sourceTree = "<group>"; };
@@ -56,8 +67,8 @@
 		AE684FAD18B594A800501654 /* FileStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileStorage.m; sourceTree = "<group>"; };
 		AE684FB218B6798B00501654 /* FakeUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FakeUserDefaults.h; path = ../TeenFeedback/FakeUserDefaults.h; sourceTree = "<group>"; };
 		AE684FB318B6798B00501654 /* FakeUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FakeUserDefaults.m; path = ../TeenFeedback/FakeUserDefaults.m; sourceTree = "<group>"; };
-		AE684FC118B6C38900501654 /* SettingsControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsControllerViewController.h; sourceTree = "<group>"; };
-		AE684FC218B6C38900501654 /* SettingsControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsControllerViewController.m; sourceTree = "<group>"; };
+		AE684FC118B6C38900501654 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		AE684FC218B6C38900501654 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		AEF89D6418B529EF00985020 /* TeenFeedback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenFeedback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF89D6718B529EF00985020 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AEF89D6918B529EF00985020 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -108,6 +119,7 @@
 				AE00584E18B7D06C00431C00 /* Supporting Files */,
 				AE00585E18B7D10900431C00 /* CounterSpec.mm */,
 				AE00586318B7D2CC00431C00 /* FileStorageSpec.mm */,
+				AE00586618B7E24100431C00 /* SettingsViewControllerSpec.mm */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -165,6 +177,7 @@
 		AEF89D6618B529EF00985020 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE005D5718B809D800431C00 /* libxml2.dylib */,
 				AEF89D6718B529EF00985020 /* Foundation.framework */,
 				AEF89D6918B529EF00985020 /* CoreGraphics.framework */,
 				AEF89D6B18B529EF00985020 /* UIKit.framework */,
@@ -176,6 +189,8 @@
 		AEF89D6D18B529EF00985020 /* TeenFeedback */ = {
 			isa = PBXGroup;
 			children = (
+				AE00587418B7EC7200431C00 /* APIClient.h */,
+				AE00587518B7EC7200431C00 /* APIClient.m */,
 				AEF89D7618B529EF00985020 /* AppDelegate.h */,
 				AEF89D7718B529EF00985020 /* AppDelegate.m */,
 				AE684F9B18B56CED00501654 /* Counter.h */,
@@ -184,8 +199,9 @@
 				AE684FAD18B594A800501654 /* FileStorage.m */,
 				AE684F9F18B57D8C00501654 /* HT */,
 				AEF89D7918B529EF00985020 /* Images.xcassets */,
-				AE684FC118B6C38900501654 /* SettingsControllerViewController.h */,
-				AE684FC218B6C38900501654 /* SettingsControllerViewController.m */,
+				AE684FC118B6C38900501654 /* SettingsViewController.h */,
+				AE684FC218B6C38900501654 /* SettingsViewController.m */,
+				AE00586818B7E34400431C00 /* SettingsViewController.xib */,
 				AEF89D6E18B529EF00985020 /* Supporting Files */,
 				AEF89DA118B55BC900985020 /* ViewController.h */,
 				AEF89DA218B55BC900985020 /* ViewController.m */,
@@ -276,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE00585218B7D06C00431C00 /* InfoPlist.strings in Resources */,
+				AE00586A18B7E34400431C00 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEF89D7218B529EF00985020 /* InfoPlist.strings in Resources */,
+				AE00586918B7E34400431C00 /* SettingsViewController.xib in Resources */,
 				AEF89D7A18B529EF00985020 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,8 +316,11 @@
 				AE00586218B7D27200431C00 /* Counter.m in Sources */,
 				AE00586118B7D25E00431C00 /* FakeUserDefaults.m in Sources */,
 				AE00585418B7D06C00431C00 /* main.m in Sources */,
+				AE00586B18B7E5B600431C00 /* SettingsViewController.m in Sources */,
+				AE00587718B7EC7200431C00 /* APIClient.m in Sources */,
 				AE00586518B7D2D300431C00 /* FileStorage.m in Sources */,
 				AE00586418B7D2CC00431C00 /* FileStorageSpec.mm in Sources */,
+				AE00586718B7E24100431C00 /* SettingsViewControllerSpec.mm in Sources */,
 				AE00585F18B7D10900431C00 /* CounterSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,11 +329,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE684FC318B6C38900501654 /* SettingsControllerViewController.m in Sources */,
+				AE684FC318B6C38900501654 /* SettingsViewController.m in Sources */,
 				AE684F9D18B56CED00501654 /* Counter.m in Sources */,
 				AEF89DA318B55BC900985020 /* ViewController.m in Sources */,
 				AE684FA618B57DA700501654 /* HTEmailAutocompleteTextField.m in Sources */,
 				AE684FAA18B583F700501654 /* WordSource.m in Sources */,
+				AE00587618B7EC7200431C00 /* APIClient.m in Sources */,
 				AEF89D7818B529EF00985020 /* AppDelegate.m in Sources */,
 				AE684FAE18B594A800501654 /* FileStorage.m in Sources */,
 				AEF89D7418B529EF00985020 /* main.m in Sources */,
@@ -357,6 +379,11 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/**",
+				);
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -379,6 +406,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/**",
+				);
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
@@ -499,6 +531,7 @@
 				AE00585C18B7D06C00431C00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEF89D5F18B529EF00985020 /* Build configuration list for PBXProject "TeenFeedback" */ = {
 			isa = XCConfigurationList;
