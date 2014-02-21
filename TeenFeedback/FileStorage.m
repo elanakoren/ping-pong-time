@@ -17,17 +17,33 @@
     self.filename = filename;
     return self;
 }
+
 -(NSArray *) all {
-    return [[NSArray alloc] init];
+    NSData* data = [NSData dataWithContentsOfFile:self.filename];
+    __autoreleasing NSError* error = nil;
+    NSArray * array;
+    if (data != nil) {
+        array = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    } else {
+        array = [NSArray array];
+    }
+    NSLog(@"----------------");
+    NSLog([array componentsJoinedByString:@","]);
+    NSLog(@"----------------");
+    return array;
 }
+
 -(void) append:(NSString *)string {
-    NSString *path = [[self applicationDocumentsDirectory].path
-                      stringByAppendingPathComponent:self.filename];
-    NSString *contents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    contents = [contents stringByAppendingString:string];
-    [contents writeToFile:path atomically:YES
-                   encoding:NSUTF8StringEncoding error:nil];
+
+    NSArray * array = self.all;
+    array = [array arrayByAddingObject:string];
+    __autoreleasing NSError* error = nil;
+    NSData * data = [NSJSONSerialization dataWithJSONObject:array options:kNilOptions error:&error];
+    NSString *path = self.filename;
+    
+    [data writeToFile:path atomically:YES];
 }
+
 - (NSURL *)applicationDocumentsDirectory {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
                                                    inDomains:NSUserDomainMask] lastObject];

@@ -10,23 +10,22 @@
 
 @interface Counter ()
 @property int counter;
+@property NSUserDefaults * userDefaults;
 @end
 
 @implementation Counter
-- (id)init {
+- (id)initWithUserDefaults:(id)userDefaults {
     // Forward to the "designated" initialization method
     self = [super init];
     if (self) {
-        NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-        
-        self.counter = [standardUserDefaults integerForKey:@"counter"];
+        self.userDefaults = userDefaults;
+        self.counter = [userDefaults integerForKey:@"counter"];
     }
     return self;
 }
 - (void)inc{
     self.counter += 1;
-    NSUserDefaults * standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    [standardUserDefaults setInteger:self.counter forKey:@"counter"];
+    [self.userDefaults setInteger:self.counter forKey:@"counter"];
 }
 
 - (int)count{

@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "Counter.h"
+#import "FakeUserDefaults.h"
 
 @interface CounterTests : XCTestCase
 
@@ -30,8 +31,9 @@
 - (void)testCounterWorks
 {
     NSLog(@"hello!~"); 
-    Counter * counter = [[Counter alloc] init];
+    Counter * counter = [[Counter alloc] initWithUserDefaults:[[FakeUserDefaults alloc] init]];
     [counter inc];
+    NSLog(@"%d", [counter count]);
     XCTAssert([counter count] == 1);
 }
 

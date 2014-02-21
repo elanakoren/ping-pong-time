@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "SettingsControllerViewController.h"
 @interface AppDelegate ()
 @end
 
@@ -21,7 +22,21 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     UIViewController *vc = [[ViewController alloc] init];
-    self.window.rootViewController = vc;
+    UIViewController *vc2 = [[SettingsControllerViewController alloc] init];
+    
+    UIImage* anImage = [UIImage imageNamed:@"Foo"];
+    UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:anImage tag:0];
+    UIImage* anImage2 = [UIImage imageNamed:@"Foo 2"];
+    UITabBarItem* theItem2 = [[UITabBarItem alloc] initWithTitle:@"Settings" image:anImage tag:0];
+    
+    vc.tabBarItem = theItem;
+    vc2.tabBarItem = theItem2;
+    
+    UITabBarController * tabBarController = [[UITabBarController alloc] init];
+    NSArray * controllers = [NSArray arrayWithObjects:vc,vc2, nil];
+    tabBarController.viewControllers = controllers;
+    
+    self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible];
     NSLog(@"DidFinishLaunching");

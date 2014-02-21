@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Counter : NSObject
+- (id) initWithUserDefaults:(id)defaults;
 - (void)inc;
 - (int)count;
 @end

@@ -18,6 +18,9 @@
 		AE684FAE18B594A800501654 /* FileStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FAD18B594A800501654 /* FileStorage.m */; };
 		AE684FAF18B594A800501654 /* FileStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FAD18B594A800501654 /* FileStorage.m */; };
 		AE684FB118B5958A00501654 /* FileStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FB018B5958A00501654 /* FileStorageTests.m */; };
+		AE684FB518B6798B00501654 /* FakeUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FB318B6798B00501654 /* FakeUserDefaults.m */; };
+		AE684FC318B6C38900501654 /* SettingsControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FC218B6C38900501654 /* SettingsControllerViewController.m */; };
+		AE684FC418B6C38900501654 /* SettingsControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FC218B6C38900501654 /* SettingsControllerViewController.m */; };
 		AEF89D6818B529EF00985020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6718B529EF00985020 /* Foundation.framework */; };
 		AEF89D6A18B529EF00985020 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6918B529EF00985020 /* CoreGraphics.framework */; };
 		AEF89D6C18B529EF00985020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF89D6B18B529EF00985020 /* UIKit.framework */; };
@@ -57,6 +60,10 @@
 		AE684FAC18B594A800501654 /* FileStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileStorage.h; sourceTree = "<group>"; };
 		AE684FAD18B594A800501654 /* FileStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileStorage.m; sourceTree = "<group>"; };
 		AE684FB018B5958A00501654 /* FileStorageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileStorageTests.m; sourceTree = "<group>"; };
+		AE684FB218B6798B00501654 /* FakeUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeUserDefaults.h; sourceTree = "<group>"; };
+		AE684FB318B6798B00501654 /* FakeUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeUserDefaults.m; sourceTree = "<group>"; };
+		AE684FC118B6C38900501654 /* SettingsControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsControllerViewController.h; sourceTree = "<group>"; };
+		AE684FC218B6C38900501654 /* SettingsControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsControllerViewController.m; sourceTree = "<group>"; };
 		AEF89D6418B529EF00985020 /* TeenFeedback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenFeedback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF89D6718B529EF00985020 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AEF89D6918B529EF00985020 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -159,6 +166,10 @@
 				AE684FA918B583F700501654 /* WordSource.m */,
 				AE684FAC18B594A800501654 /* FileStorage.h */,
 				AE684FAD18B594A800501654 /* FileStorage.m */,
+				AE684FB218B6798B00501654 /* FakeUserDefaults.h */,
+				AE684FB318B6798B00501654 /* FakeUserDefaults.m */,
+				AE684FC118B6C38900501654 /* SettingsControllerViewController.h */,
+				AE684FC218B6C38900501654 /* SettingsControllerViewController.m */,
 			);
 			path = TeenFeedback;
 			sourceTree = "<group>";
@@ -289,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE684FC318B6C38900501654 /* SettingsControllerViewController.m in Sources */,
 				AE684F9D18B56CED00501654 /* Counter.m in Sources */,
 				AEF89DA318B55BC900985020 /* ViewController.m in Sources */,
 				AE684FA618B57DA700501654 /* HTEmailAutocompleteTextField.m in Sources */,
@@ -310,7 +322,9 @@
 				AE684FAB18B583F700501654 /* WordSource.m in Sources */,
 				AEF89DA418B55BC900985020 /* ViewController.m in Sources */,
 				AE684FAF18B594A800501654 /* FileStorage.m in Sources */,
+				AE684FC418B6C38900501654 /* SettingsControllerViewController.m in Sources */,
 				AE684FB118B5958A00501654 /* FileStorageTests.m in Sources */,
+				AE684FB518B6798B00501654 /* FakeUserDefaults.m in Sources */,
 				AEF89D8D18B529EF00985020 /* TeenFeedbackTests.m in Sources */,
 				AE684FA518B57DA700501654 /* HTAutocompleteTextField.m in Sources */,
 			);
