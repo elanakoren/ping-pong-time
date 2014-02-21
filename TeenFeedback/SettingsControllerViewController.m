@@ -11,6 +11,7 @@
 @interface SettingsControllerViewController ()
 @property UITextField * textField;
 @property UIButton * button;
+@property UILabel * statusLabel;
 @end
 
 @implementation SettingsControllerViewController
@@ -34,6 +35,10 @@
     text.backgroundColor = [UIColor whiteColor];
     self.textField = text;
     [self.view addSubview:text];
+    
+    UILabel * statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.textField.frame.origin.y+self.textField.frame.size.height+10, [self.view bounds].size.width, 50)];
+    [self.view addSubview:statusLabel];
+    self.statusLabel = statusLabel;
     
     UIButton * button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     button.frame = CGRectMake([self.view bounds].size.width-100+10, [UIApplication sharedApplication].statusBarFrame.size.height, 80, 31);
@@ -81,6 +86,19 @@
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                
+                NSError *e = nil;
+                NSDictionary * returnDictionary;
+                returnDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&e];
+                
+                if ([ returnDictionary objectForKey:@"error"] != nil) {
+                    self.statusLabel = [returnDictionary objectForKey:@"error"];
+                } else if ([returnDictionary objectForKey:@"name"] != nil) {
+                    self.statusLabel.text = @"";
+                    self.textField.text = [returnDictionary objectForKey:@"name"];
+
+                }
+                
                 [self.button setTitle:@"Complete!" forState: UIControlStateNormal];
                 self.textField.text =  [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
