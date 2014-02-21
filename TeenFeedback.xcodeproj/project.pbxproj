@@ -176,21 +176,21 @@
 		AEF89D6D18B529EF00985020 /* TeenFeedback */ = {
 			isa = PBXGroup;
 			children = (
-				AE684F9F18B57D8C00501654 /* HT */,
 				AEF89D7618B529EF00985020 /* AppDelegate.h */,
 				AEF89D7718B529EF00985020 /* AppDelegate.m */,
-				AEF89DA118B55BC900985020 /* ViewController.h */,
-				AEF89DA218B55BC900985020 /* ViewController.m */,
-				AEF89D7918B529EF00985020 /* Images.xcassets */,
-				AEF89D6E18B529EF00985020 /* Supporting Files */,
 				AE684F9B18B56CED00501654 /* Counter.h */,
 				AE684F9C18B56CED00501654 /* Counter.m */,
-				AE684FA818B583F700501654 /* WordSource.h */,
-				AE684FAD18B594A800501654 /* FileStorage.m */,
-				AE684FA918B583F700501654 /* WordSource.m */,
 				AE684FAC18B594A800501654 /* FileStorage.h */,
+				AE684FAD18B594A800501654 /* FileStorage.m */,
+				AE684F9F18B57D8C00501654 /* HT */,
+				AEF89D7918B529EF00985020 /* Images.xcassets */,
 				AE684FC118B6C38900501654 /* SettingsControllerViewController.h */,
 				AE684FC218B6C38900501654 /* SettingsControllerViewController.m */,
+				AEF89D6E18B529EF00985020 /* Supporting Files */,
+				AEF89DA118B55BC900985020 /* ViewController.h */,
+				AEF89DA218B55BC900985020 /* ViewController.m */,
+				AE684FA818B583F700501654 /* WordSource.h */,
+				AE684FA918B583F700501654 /* WordSource.m */,
 			);
 			path = TeenFeedback;
 			sourceTree = "<group>";
