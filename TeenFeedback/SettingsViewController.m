@@ -33,6 +33,16 @@
 }
 
 - (void)buttonTouch {
+    [self.textField resignFirstResponder];
+
+    if (!self.spinnerView) {
+        self.spinnerView = [[UIActivityIndicatorView alloc] initWithFrame:self.view.frame];
+        self.spinnerView.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.5];
+    }
+    [self.spinnerView setHidden:NO];
+    [self.spinnerView startAnimating];
+    [self.view addSubview:self.spinnerView];
+//
     [self.apiClient updateName:self.textField.text];
 }
 
