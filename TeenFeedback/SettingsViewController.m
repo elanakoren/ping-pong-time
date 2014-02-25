@@ -63,16 +63,15 @@
         [self.spinnerView stopAnimating];
         return nil;
     } error:^id(NSError *error) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ERROR!"
+                                                            message:error.userInfo[@"NSLocalizedDescription"]                                                         delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        self.currentAlertView = alertView;
+        [self.currentAlertView show];
+        [self.spinnerView stopAnimating];
         return nil;
     }];
-
-    //  then:^{
-//        //get rid of spinner,
-//        //show confirmation
-//        //etc.
-//    } error:^{
-//        //show pop-up with error
-//    }];
 }
 
 @end

@@ -40,7 +40,7 @@
                         }
             failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 NSLog(@"Error: %@", error);
-                            [deferred rejectWithError:error];
+                [deferred rejectWithError:error];
     }];
     return deferred;
 }

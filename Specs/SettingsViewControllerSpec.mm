@@ -75,7 +75,23 @@ describe(@"SettingsViewController", ^{
                 settingsViewController.spinnerView.isHidden should be_truthy;
             });
         });
-    });
-});
+
+        describe(@"when the request is not sucessful", ^{
+            beforeEach(^{
+                NSError *error = [[NSError alloc]initWithDomain:@"AFNetworkingErrorDomain" code:-1011 userInfo:@{@"NSLocalizedDescription": @"Name is already taken"}];
+                [deferred rejectWithError: error];         
+            });
+
+            it(@"should dispaly an error message", ^{
+                UIAlertView *alertView = settingsViewController.currentAlertView;
+                alertView.title should equal(@"ERROR!");
+                alertView.message should equal(@"Name is already taken");
+                alertView.numberOfButtons should equal(1);
+                alertView.cancelButtonIndex should equal(0);
+                [alertView buttonTitleAtIndex:0] should equal(@"OK");
+            });
+
+        });
+    });});
 
 SPEC_END
