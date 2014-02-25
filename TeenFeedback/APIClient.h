@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class KSPromise, AFHTTPRequestOperationManager;
+
 @interface APIClient : NSObject
--(NSMutableDictionary *)updateName:(NSString *)name;
+
+-(id)initWithOperationManager:(AFHTTPRequestOperationManager *)operationManager;
+-(KSPromise *)updateName:(NSString *)name;
+
 @end

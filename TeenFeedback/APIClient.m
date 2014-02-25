@@ -7,9 +7,40 @@
 //
 
 #import "APIClient.h"
+#import "KSPromise.h"
+#import "KSDeferred.h"
+#import "AFHTTPRequestOperationManager.h"
+
+@interface APIClient ()
+
+@property (nonatomic, strong) AFHTTPRequestOperationManager *operationManager;
+
+@end
+
 
 @implementation APIClient
--(NSMutableDictionary *)updateName:(NSString *)name {
-    return [@{} mutableCopy];
+
+- (id)initWithOperationManager:(AFHTTPRequestOperationManager *)operationManager {
+    self = [super init];
+    if (self) {
+        self.operationManager = operationManager;
+    }
+    return self;
 }
+
+-(KSPromise *)updateName:(NSString *)name {
+    NSUUID *oNSUUID = [[UIDevice currentDevice] identifierForVendor];
+    NSDictionary *parameters = @{@"phone_id": [oNSUUID UUIDString], @"name": name};
+
+    KSDeferred *deferred = [[KSDeferred alloc] init];
+    [self.operationManager POST:@"/name_announcements" parameters:parameters
+            success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                            [deferred resolveWithValue:responseObject];
+                        }
+            failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                            [deferred rejectWithError:error];
+    }];
+    return deferred.promise;
+}
+
 @end

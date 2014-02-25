@@ -1,0 +1,6 @@
+[submodule "deferred"]
+	path = deferred
+	url = https://github.com/kseebaldt/deferred.git
+[submodule "AFNetworking"]
+	path = AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git
