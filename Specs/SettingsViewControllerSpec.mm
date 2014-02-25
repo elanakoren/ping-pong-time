@@ -1,5 +1,7 @@
 #import "SettingsViewController.h"
 #import "APIClient.h"
+#import "KSPromise.h"
+#import "KSDeferred.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
@@ -9,10 +11,14 @@ SPEC_BEGIN(SettingsViewSpec)
 describe(@"SettingsViewController", ^{
     __block SettingsViewController *settingsViewController;
     __block APIClient *apiClient;
+    __block KSDeferred *deferred;
 
     beforeEach(^{
         apiClient = nice_fake_for([APIClient class]);
         settingsViewController = [[SettingsViewController alloc] initWithAPIClient:apiClient];
+
+        deferred = [[KSDeferred alloc] init];
+        apiClient stub_method(@selector(updateName:)).and_return(deferred);
         settingsViewController.view should_not be_nil;
     });
 
@@ -50,6 +56,25 @@ describe(@"SettingsViewController", ^{
             settingsViewController.spinnerView.isAnimating should be_truthy;
         });
 
+        describe(@"when the request is successful", ^{
+            beforeEach(^{
+                [deferred resolveWithValue:@{@"name": @"Alex"}];
+            });
+
+            it(@"displays a popup", ^{
+                UIAlertView *alertView = settingsViewController.currentAlertView;
+                alertView.title should equal(@"WELCOME!");
+                alertView.message should equal(@"Congratulations, you're now Alex!");
+                alertView.numberOfButtons should equal(1);
+                alertView.cancelButtonIndex should equal(0);
+                [alertView buttonTitleAtIndex:0] should equal(@"OK");
+            });
+
+            it(@"hides the spinner", ^{
+                settingsViewController.spinnerView.isAnimating should be_falsy;
+                settingsViewController.spinnerView.isHidden should be_truthy;
+            });
+        });
     });
 });
 

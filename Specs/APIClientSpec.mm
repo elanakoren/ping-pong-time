@@ -1,6 +1,7 @@
 #import "APIClient.h"
 #import "KSPromise.h"
 #import "AFHTTPRequestOperationManager.h"
+#import "KSDeferred.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
@@ -32,8 +33,8 @@ describe(@"APIClient", ^{
             [UIDevice class] stub_method(@selector(currentDevice)).and_return(currentDevice);
         });
 
-        it(@"should return a KSPromise", ^{
-            [apiClient updateName:@"some name"] should be_instance_of([KSPromise class]);
+        it(@"should return a KSDeferred", ^{
+            [apiClient updateName:@"some name"] should be_instance_of([KSDeferred class]);
         });
 
         it(@"makes a request with devices unique ID", ^{

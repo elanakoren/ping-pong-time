@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@class KSPromise, AFHTTPRequestOperationManager;
+@class KSDeferred, AFHTTPRequestOperationManager;
 
 @interface APIClient : NSObject
 
 -(id)initWithOperationManager:(AFHTTPRequestOperationManager *)operationManager;
--(KSPromise *)updateName:(NSString *)name;
+-(KSDeferred *)updateName:(NSString *)name;
 
 @end

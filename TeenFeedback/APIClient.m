@@ -28,19 +28,21 @@
     return self;
 }
 
--(KSPromise *)updateName:(NSString *)name {
+-(KSDeferred *)updateName:(NSString *)name {
     NSUUID *oNSUUID = [[UIDevice currentDevice] identifierForVendor];
     NSDictionary *parameters = @{@"phone_id": [oNSUUID UUIDString], @"name": name};
 
     KSDeferred *deferred = [[KSDeferred alloc] init];
     [self.operationManager POST:@"/name_announcements" parameters:parameters
             success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                NSLog(@"Success: %@", responseObject);
                             [deferred resolveWithValue:responseObject];
                         }
             failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                NSLog(@"Error: %@", error);
                             [deferred rejectWithError:error];
     }];
-    return deferred.promise;
+    return deferred;
 }
 
 @end

@@ -8,9 +8,12 @@
 
 #import "SettingsViewController.h"
 #import "APIClient.h"
+#import "KSDeferred.h"
 
 @interface SettingsViewController ()
 @property APIClient *apiClient;
+@property (strong, nonatomic, readwrite) UIActivityIndicatorView *spinnerView;
+@property (strong, nonatomic, readwrite) UIAlertView *currentAlertView;
 @end
 
 @implementation SettingsViewController
@@ -21,6 +24,11 @@
         self.apiClient = apiClient;
     }
     return self;
+}
+
+- (id)init {
+    [self doesNotRecognizeSelector:_cmd];
+    return nil;
 }
 
 - (void)viewDidLoad
@@ -42,8 +50,29 @@
     [self.spinnerView setHidden:NO];
     [self.spinnerView startAnimating];
     [self.view addSubview:self.spinnerView];
-//
-    [self.apiClient updateName:self.textField.text];
+
+    KSDeferred *deferred = [self.apiClient updateName:self.textField.text];
+    [deferred.promise then:^id(NSDictionary *value) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"WELCOME!"
+                                                            message:[NSString stringWithFormat:@"Congratulations, you're now %@!", value[@"name"]]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        self.currentAlertView = alertView;
+        [self.currentAlertView show];
+        [self.spinnerView stopAnimating];
+        return nil;
+    } error:^id(NSError *error) {
+        return nil;
+    }];
+
+    //  then:^{
+//        //get rid of spinner,
+//        //show confirmation
+//        //etc.
+//    } error:^{
+//        //show pop-up with error
+//    }];
 }
 
 @end

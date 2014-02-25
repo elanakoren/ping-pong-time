@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "SettingsViewController.h"
+#import "AFHTTPRequestOperationManager.h"
+#import "APIClient.h"
+
 @interface AppDelegate ()
 @end
 
@@ -22,12 +25,12 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     UIViewController *vc = [[ViewController alloc] init];
-    UIViewController *vc2 = [[SettingsViewController alloc] init];
+    AFHTTPRequestOperationManager *operationManager = [[AFHTTPRequestOperationManager alloc]initWithBaseURL:[NSURL URLWithString:@"http://localhost:3000"]];
+    APIClient *apiClient = [[APIClient alloc] initWithOperationManager:operationManager];
+    UIViewController *vc2 = [[SettingsViewController alloc] initWithAPIClient:apiClient];
     
-    UIImage* anImage = [UIImage imageNamed:@"Foo"];
-    UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:anImage tag:0];
-    UIImage* anImage2 = [UIImage imageNamed:@"Foo 2"];
-    UITabBarItem* theItem2 = [[UITabBarItem alloc] initWithTitle:@"Settings" image:anImage tag:0];
+    UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:nil tag:0];
+    UITabBarItem* theItem2 = [[UITabBarItem alloc] initWithTitle:@"Settings" image:nil tag:0];
     
     vc.tabBarItem = theItem;
     vc2.tabBarItem = theItem2;

@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (strong, nonatomic, readonly) UIActivityIndicatorView *spinnerView;
+@property (strong, nonatomic, readonly) UIAlertView *currentAlertView;
 
 - (id)initWithAPIClient:(APIClient *)apiClient;
+
 @end
