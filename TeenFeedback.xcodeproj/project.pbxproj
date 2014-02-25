@@ -51,6 +51,7 @@
 		AE005D9318BC18FB00431C00 /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE005D9218BC18FB00431C00 /* AppDelegateSpec.mm */; };
 		AE005D9418BC19D900431C00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89D7718B529EF00985020 /* AppDelegate.m */; };
 		AE005D9518BC19E500431C00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89DA218B55BC900985020 /* ViewController.m */; };
+		AE005D9818BD08BF00431C00 /* FakeAFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE005D9718BD08BF00431C00 /* FakeAFHTTPRequestOperationManager.m */; };
 		AE684F9D18B56CED00501654 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684F9C18B56CED00501654 /* Counter.m */; };
 		AE684FA418B57DA700501654 /* HTAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA118B57DA700501654 /* HTAutocompleteTextField.m */; };
 		AE684FA618B57DA700501654 /* HTEmailAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA318B57DA700501654 /* HTEmailAutocompleteTextField.m */; };
@@ -110,6 +111,8 @@
 		AE005D7D18BBD41A00431C00 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		AE005D7E18BBD41A00431C00 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		AE005D9218BC18FB00431C00 /* AppDelegateSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegateSpec.mm; sourceTree = "<group>"; };
+		AE005D9618BD08BF00431C00 /* FakeAFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeAFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		AE005D9718BD08BF00431C00 /* FakeAFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeAFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
 		AE684F9B18B56CED00501654 /* Counter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Counter.h; sourceTree = "<group>"; };
 		AE684F9C18B56CED00501654 /* Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
 		AE684FA018B57DA700501654 /* HTAutocompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAutocompleteTextField.h; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 				AE00586618B7E24100431C00 /* SettingsViewControllerSpec.mm */,
 				AE005D5B18BBC79700431C00 /* APIClientSpec.mm */,
 				AE005D9218BC18FB00431C00 /* AppDelegateSpec.mm */,
+				AE005D9618BD08BF00431C00 /* FakeAFHTTPRequestOperationManager.h */,
+				AE005D9718BD08BF00431C00 /* FakeAFHTTPRequestOperationManager.m */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -435,6 +440,7 @@
 				AE005D6918BBCCDA00431C00 /* KSPromise.m in Sources */,
 				AE005D8918BBDBF800431C00 /* AFHTTPRequestOperation.m in Sources */,
 				AE005D8C18BBDC1800431C00 /* AFURLRequestSerialization.m in Sources */,
+				AE005D9818BD08BF00431C00 /* FakeAFHTTPRequestOperationManager.m in Sources */,
 				AE005D6A18BBCCE000431C00 /* KSDeferred.m in Sources */,
 				AE005D8818BBDBD600431C00 /* AFHTTPRequestOperationManager.m in Sources */,
 				AE005D8E18BBDC5C00431C00 /* AFSecurityPolicy.m in Sources */,

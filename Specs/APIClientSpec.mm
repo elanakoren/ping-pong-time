@@ -2,6 +2,7 @@
 #import "KSPromise.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "KSDeferred.h"
+#import "FakeAFHTTPRequestOperationManager.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
@@ -10,17 +11,15 @@ SPEC_BEGIN(APIClientSpec)
 
 describe(@"APIClient", ^{
     __block APIClient *apiClient;
-    __block AFHTTPRequestOperationManager *operationManager;
+    __block FakeAFHTTPRequestOperationManager *operationManager;
     __block NSOperationQueue *operationQueue;
 
 
     beforeEach(^{
-        operationManager = nice_fake_for([AFHTTPRequestOperationManager class]);
+        operationManager = [[FakeAFHTTPRequestOperationManager alloc] initWithBaseURL:@"http://localhost:3000"] ;
         spy_on(operationManager);
-        operationQueue = [[NSOperationQueue alloc] init];
-        operationManager stub_method(@selector(operationQueue)).and_return(operationQueue);
-        operationManager stub_method(@selector(baseURL)).and_return(@"http://localhost:3000");
         apiClient = [[APIClient alloc] initWithOperationManager:operationManager];
+
     });
 
     describe(@"-updateName:", ^{
@@ -46,17 +45,18 @@ describe(@"APIClient", ^{
         });
 
         xdescribe(@"when the request is successful", ^{
-            //TODO: test this better
+            __block KSDeferred *deferred;
+            __block NSDictionary *fakeJSON;
+
             beforeEach(^{
-                [apiClient updateName:@"some name"];
-//                NSInvocation *postRequest = (NSInvocation *)[[operationManager sent_messages] firstObject];
-//                AFHTTPRequestOperation *returnValue = nil;
-//                [postRequest getReturnValue:&returnValue];
-//                NSLog(@"================> %@", (AFHTTPRequestOperation *)returnValue);
+                deferred = [apiClient updateName:@"some name"];
+                spy_on(deferred);
+                fakeJSON = @{}
+                operationManager.lastSuccessBlock(nil, fakeJSON);
             });
 
             it(@"does stuff", ^{
-
+                deferred should have_received(@selector(resolveWithValue:)).with(fakeJson);
             });
         });
     });
