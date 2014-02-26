@@ -45,4 +45,21 @@
     return deferred;
 }
 
+-(KSDeferred *)shout {
+    NSUUID *oNSUUID = [[UIDevice currentDevice] identifierForVendor];
+    NSDictionary *parameters = @{@"phone_id": [oNSUUID UUIDString]};
+
+    KSDeferred *deferred = [[KSDeferred alloc] init];
+    [self.operationManager POST:@"/shouts" parameters:parameters
+                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                            NSLog(@"Success: %@", responseObject);
+                            [deferred resolveWithValue:responseObject];
+                        }
+                        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                            NSLog(@"Error: %@", error);
+                            [deferred rejectWithError:error];
+                        }];
+    return deferred;
+}
+
 @end

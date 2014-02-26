@@ -107,6 +107,20 @@ describe(@"SettingsViewController", ^{
             });
         });
     });
+
+    describe(@"tapping the play button", ^{
+        beforeEach(^{
+            settingsViewController.playSwitch.on = YES;
+            [settingsViewController.playSwitch sendActionsForControlEvents:UIControlEventValueChanged];
+        });
+
+        it(@"should send a message to the server", ^{
+            apiClient should have_received(@selector(shout));
+        });
+
+        xit(@"should start a timer", ^{
+        });
+    });
 });
 
 SPEC_END

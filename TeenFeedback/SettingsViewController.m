@@ -73,6 +73,20 @@
     }];
 }
 
+- (IBAction)playSwitchToggled:(UISwitch *)sender {
+    [self.apiClient shout];
+
+
+//    NSTimer *timer = [NSTimer timerWithTimeInterval:0.1
+//                                             target:self
+//                                           selector:@selector(timerFired:)
+//                                           userInfo:nil
+//                                            repeats:NO];
+//
+//    [self.runLoop addTimer:timer forMode:NSDefaultRunLoopMode];
+//    [timer fire];
+}
+
 #pragma mark - Private
 
 - (void)presentErrorAlert {
