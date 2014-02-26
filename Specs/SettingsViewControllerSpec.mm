@@ -79,7 +79,7 @@ describe(@"SettingsViewController", ^{
         describe(@"when the request is not sucessful", ^{
             beforeEach(^{
                 NSError *error = [[NSError alloc]initWithDomain:@"AFNetworkingErrorDomain" code:-1011 userInfo:@{@"NSLocalizedDescription": @"Name is already taken"}];
-                [deferred rejectWithError: error];         
+                [deferred rejectWithError: error];
             });
 
             it(@"should dispaly an error message", ^{
@@ -90,8 +90,23 @@ describe(@"SettingsViewController", ^{
                 alertView.cancelButtonIndex should equal(0);
                 [alertView buttonTitleAtIndex:0] should equal(@"OK");
             });
-
         });
-    });});
+
+        describe(@"when the request fails due to the name already being taken", ^{
+            beforeEach(^{
+                [deferred resolveWithValue:@{@"error": @"Name taken"}];
+            });;
+
+            it(@"should display a popup with the error message", ^{
+                UIAlertView *alertView = settingsViewController.currentAlertView;
+                alertView.title should equal(@"Error!");
+                alertView.message should equal(@"Name is already taken!");
+                alertView.numberOfButtons should equal(1);
+                alertView.cancelButtonIndex should equal(0);
+                [alertView buttonTitleAtIndex:0] should equal(@"OK");
+            });
+        });
+    });
+});
 
 SPEC_END

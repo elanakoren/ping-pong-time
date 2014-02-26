@@ -16,7 +16,8 @@ describe(@"APIClient", ^{
 
 
     beforeEach(^{
-        operationManager = [[FakeAFHTTPRequestOperationManager alloc] initWithBaseURL:@"http://localhost:3000"] ;
+        NSURL *baseURL = [NSURL URLWithString:@"http://localhost:3000"];
+        operationManager = [[FakeAFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL];
         spy_on(operationManager);
         apiClient = [[APIClient alloc] initWithOperationManager:operationManager];
 
@@ -42,22 +43,6 @@ describe(@"APIClient", ^{
             [UIDevice currentDevice] should have_received(@selector(identifierForVendor));
             operationManager should have_received(@selector(POST:parameters:success:failure:)).
             with(@"/name_announcements", @{@"phone_id": @"68753A44-4D6F-1226-9C60-0050E4C00067", @"name": @"some name"}, Arguments::anything, Arguments::anything);
-        });
-
-        xdescribe(@"when the request is successful", ^{
-            __block KSDeferred *deferred;
-            __block NSDictionary *fakeJSON;
-
-            beforeEach(^{
-                deferred = [apiClient updateName:@"some name"];
-                spy_on(deferred);
-                fakeJSON = @{}
-                operationManager.lastSuccessBlock(nil, fakeJSON);
-            });
-
-            it(@"does stuff", ^{
-                deferred should have_received(@selector(resolveWithValue:)).with(fakeJson);
-            });
         });
     });
 

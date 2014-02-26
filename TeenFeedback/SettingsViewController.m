@@ -53,14 +53,13 @@
 
     KSDeferred *deferred = [self.apiClient updateName:self.textField.text];
     [deferred.promise then:^id(NSDictionary *value) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"WELCOME!"
-                                                            message:[NSString stringWithFormat:@"Congratulations, you're now %@!", value[@"name"]]
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
-        self.currentAlertView = alertView;
-        [self.currentAlertView show];
-        [self.spinnerView stopAnimating];
+        if (value[@"error"]) {
+            [self presentErrorAlert];
+            return nil;
+        }
+
+        [self presentWelcomeAlertWithName:value[@"name"]];
+
         return nil;
     } error:^id(NSError *error) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"ERROR!"
@@ -72,6 +71,31 @@
         [self.spinnerView stopAnimating];
         return nil;
     }];
+}
+
+#pragma mark - Private
+
+- (void)presentErrorAlert {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error!"
+                                                        message:@"Name is already taken!"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    self.currentAlertView = alertView;
+    [self.currentAlertView show];
+    [self.spinnerView stopAnimating];
+}
+
+- (void)presentWelcomeAlertWithName:(NSString *)name {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"WELCOME!"
+                                                        message:[NSString stringWithFormat:@"Congratulations, you're now %@!", name]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    self.currentAlertView = alertView;
+    [self.currentAlertView show];
+    [self.spinnerView stopAnimating];
+
 }
 
 @end
