@@ -62,4 +62,37 @@
     return deferred;
 }
 
+-(KSDeferred *)status {
+    NSUUID *oNSUUID = [[UIDevice currentDevice] identifierForVendor];
+    NSDictionary *parameters = @{@"phone_id": [oNSUUID UUIDString]};
+    KSDeferred *deferred = [[KSDeferred alloc] init];
+    [self.operationManager GET:@"/status" parameters:parameters
+                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                            NSLog(@"Success: %@", responseObject);
+                            [deferred resolveWithValue:responseObject];
+                        }
+                        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                            NSLog(@"Error: %@", error);
+                            [deferred rejectWithError:error];
+                        }];
+    return deferred;
+}
+
+-(KSDeferred *)nak {
+    NSUUID *oNSUUID = [[UIDevice currentDevice] identifierForVendor];
+    NSDictionary *parameters = @{@"phone_id": [oNSUUID UUIDString]};
+
+    KSDeferred *deferred = [[KSDeferred alloc] init];
+    [self.operationManager POST:@"/naks" parameters:parameters
+                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                            NSLog(@"Success: %@", responseObject);
+                            [deferred resolveWithValue:responseObject];
+                        }
+                        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                            NSLog(@"Error: %@", error);
+                            [deferred rejectWithError:error];
+                        }];
+    return deferred;
+}
+
 @end

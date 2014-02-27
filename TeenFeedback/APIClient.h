@@ -15,5 +15,7 @@
 -(id)initWithOperationManager:(AFHTTPRequestOperationManager *)operationManager;
 -(KSDeferred *)updateName:(NSString *)name;
 -(KSDeferred *)shout;
+-(KSDeferred *)status;
+-(KSDeferred *)nak;
 
 @end

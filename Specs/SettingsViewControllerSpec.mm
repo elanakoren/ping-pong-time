@@ -12,14 +12,22 @@ describe(@"SettingsViewController", ^{
     __block SettingsViewController *settingsViewController;
     __block APIClient *apiClient;
     __block KSDeferred *deferred;
+    __block NSRunLoop <CedarDouble> *timerRunLoop;
+    __block NSUUID *uid;
+    __block NSTimer *timer;
+    __block UIDevice *currentDevice;
 
     beforeEach(^{
         apiClient = nice_fake_for([APIClient class]);
-        settingsViewController = [[SettingsViewController alloc] initWithAPIClient:apiClient];
+        timerRunLoop = nice_fake_for([NSRunLoop class]);
+        settingsViewController = [[SettingsViewController alloc] initWithAPIClientandRunLoop:apiClient timerRunLoop:timerRunLoop];
 
         deferred = [[KSDeferred alloc] init];
         apiClient stub_method(@selector(updateName:)).and_return(deferred);
+        apiClient stub_method(@selector(status)).and_return(deferred);
+
         settingsViewController.view should_not be_nil;
+
     });
 
     it(@"should have a text field", ^{
@@ -108,19 +116,102 @@ describe(@"SettingsViewController", ^{
         });
     });
 
-    describe(@"tapping the play button", ^{
+    describe(@"switching the play switch to on", ^{
         beforeEach(^{
             settingsViewController.playSwitch.on = YES;
             [settingsViewController.playSwitch sendActionsForControlEvents:UIControlEventValueChanged];
+
+            uid = [[NSUUID alloc] initWithUUIDString:@"68753A44-4D6F-1226-9C60-0050E4C00067"];
+            currentDevice = nice_fake_for([UIDevice class]);
+            currentDevice stub_method(@selector(identifierForVendor)).and_return(uid);
+
+            spy_on([UIDevice class]);
+            [UIDevice class] stub_method(@selector(currentDevice)).and_return(currentDevice);
         });
 
         it(@"should send a message to the server", ^{
             apiClient should have_received(@selector(shout));
         });
 
-        xit(@"should start a timer", ^{
+        it(@"should start a timer", ^{
+            timerRunLoop should have_received(@selector(addTimer:forMode:));
+            NSInvocation *timerAddInvocation = timerRunLoop.sent_messages.firstObject;
+
+            [timerAddInvocation getArgument:&timer atIndex:2]; //change this back to 2
+
+            timer should_not be_nil;
+        });
+
+        it(@"should poll the server with a status call", ^{
+            apiClient should have_received(@selector(status));
+        });
+
+        describe(@"when the server returns match data", ^{
+            beforeEach(^{
+                [deferred resolveWithValue:@{
+                     @"status": @"waiting",
+                     @"match_id": @"1",
+                     @"name": @"bob",
+                     @"created_at": @"2014-01-01"
+                 }];
+            });
+
+            it(@"should stop the timer", ^{
+                NSInvocation *timerAddInvocation = timerRunLoop.sent_messages.firstObject;
+
+                __autoreleasing NSTimer *timer;
+                [timerAddInvocation getArgument:&timer atIndex:2];
+                [timer isValid] should be_falsy;
+            });
+
+            it(@"should bring up match information (opponent name, confirm, deny button)", ^{
+                UIAlertView *alertView = settingsViewController.currentAlertView;
+                alertView.title should equal(@"Opponent");
+                alertView.message should equal(@"Do you want to play bob");
+                alertView.numberOfButtons should equal(2);
+                alertView.cancelButtonIndex should equal(0);
+                [alertView buttonTitleAtIndex:0] should equal(@"OK");
+                [alertView buttonTitleAtIndex:1] should equal(@"NO!");
+            });
+        });
+
+        describe(@"when the server does not return match data", ^{
+            beforeEach(^{
+                [deferred resolveWithValue:@{
+                     @"status": @"waiting"
+                }];
+            });
+
+            it(@"should not stop the timer", ^{
+                NSInvocation *timerAddInvocation = timerRunLoop.sent_messages.firstObject;
+
+                [timerAddInvocation getArgument:&timer atIndex:2];
+                [timer isValid] should be_truthy;
+            });
+        });
+
+        describe(@"switching the play switch to off", ^{
+            beforeEach(^{
+                settingsViewController.playSwitch.on = NO;
+                [settingsViewController.playSwitch sendActionsForControlEvents:UIControlEventValueChanged];
+
+                spy_on([UIDevice class]);
+            });
+
+            it(@"should send a message to the server", ^{
+                apiClient should have_received(@selector(nak));
+            });
+
+            it(@"should stop the timer if it exists", ^{
+
+                NSInvocation *timerAddInvocation = timerRunLoop.sent_messages.firstObject;
+                [timerAddInvocation getArgument:&timer atIndex:2];
+
+                (timer == nil || [timer isValid]) should be_falsy;
+            });
         });
     });
+
 });
 
 SPEC_END

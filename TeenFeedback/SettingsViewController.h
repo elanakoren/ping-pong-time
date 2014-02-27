@@ -19,5 +19,7 @@
 @property (strong, nonatomic, readonly) UIAlertView *currentAlertView;
 
 - (id)initWithAPIClient:(APIClient *)apiClient;
+- (id)initWithAPIClientandRunLoop:(APIClient *)apiClient timerRunLoop:(NSRunLoop *)timerRunLoop;
+- (void)timerFired;
 
 @end

@@ -11,7 +11,9 @@
 #import "KSDeferred.h"
 
 @interface SettingsViewController ()
-@property APIClient *apiClient;
+@property (nonatomic) APIClient *apiClient;
+@property (nonatomic) NSRunLoop *timerRunLoop;
+@property (nonatomic) NSTimer *timer;
 @property (strong, nonatomic, readwrite) UIActivityIndicatorView *spinnerView;
 @property (strong, nonatomic, readwrite) UIAlertView *currentAlertView;
 @end
@@ -22,6 +24,15 @@
     self = [super init];
     if (self) {
         self.apiClient = apiClient;
+    }
+    return self;
+}
+
+- (id)initWithAPIClientandRunLoop:(APIClient *)apiClient timerRunLoop:(NSRunLoop *)timerRunLoop {
+    self = [super init];
+    if (self) {
+        self.apiClient = apiClient;
+        self.timerRunLoop = timerRunLoop;
     }
     return self;
 }
@@ -74,17 +85,46 @@
 }
 
 - (IBAction)playSwitchToggled:(UISwitch *)sender {
-    [self.apiClient shout];
+    if (self.playSwitch.on == YES) {
+        [self.apiClient shout];
 
 
-//    NSTimer *timer = [NSTimer timerWithTimeInterval:0.1
-//                                             target:self
-//                                           selector:@selector(timerFired:)
-//                                           userInfo:nil
-//                                            repeats:NO];
-//
-//    [self.runLoop addTimer:timer forMode:NSDefaultRunLoopMode];
-//    [timer fire];
+        self.timer = [NSTimer timerWithTimeInterval:30
+                                                 target:self
+                                               selector:@selector(timerFired)
+                                               userInfo:nil
+                                                repeats:YES];
+        [self.timerRunLoop addTimer:self.timer forMode:NSDefaultRunLoopMode];
+
+        [self.timer fire];
+    } else {
+        [self.apiClient nak];
+        [self.timer invalidate];
+    }
+}
+
+- (void)timerFired {
+    KSDeferred *deferred = [self.apiClient status];
+
+    [deferred.promise then:^id(NSDictionary *value) {
+        if (value[@"match_id"]) {
+            [self.timer invalidate];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Opponent"
+                                                                message:[NSString stringWithFormat:@"Do you want to play %@" , value[@"name"]]                                                        delegate:nil
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:@"NO!",nil
+                                      ];
+            self.currentAlertView = alertView;
+            [self.currentAlertView show];
+
+        }
+
+
+        return nil;
+    } error:^id(NSError *error) {
+        return nil;
+    }];
+
 }
 
 #pragma mark - Private
