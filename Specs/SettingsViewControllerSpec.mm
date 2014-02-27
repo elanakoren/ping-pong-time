@@ -209,6 +209,8 @@ describe(@"SettingsViewController", ^{
 
                 (timer == nil || [timer isValid]) should be_falsy;
             });
+            
+            
         });
     });
 
