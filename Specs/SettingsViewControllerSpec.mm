@@ -2,6 +2,7 @@
 #import "APIClient.h"
 #import "KSPromise.h"
 #import "KSDeferred.h"
+#import "UIAlertView+Spec.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
@@ -70,7 +71,7 @@ describe(@"SettingsViewController", ^{
             });
 
             it(@"displays a popup", ^{
-                UIAlertView *alertView = settingsViewController.currentAlertView;
+                UIAlertView *alertView = [UIAlertView currentAlertView];
                 alertView.title should equal(@"WELCOME!");
                 alertView.message should equal(@"Congratulations, you're now Alex!");
                 alertView.numberOfButtons should equal(1);
@@ -91,7 +92,7 @@ describe(@"SettingsViewController", ^{
             });
 
             it(@"should dispaly an error message", ^{
-                UIAlertView *alertView = settingsViewController.currentAlertView;
+                UIAlertView *alertView = [UIAlertView currentAlertView];
                 alertView.title should equal(@"ERROR!");
                 alertView.message should equal(@"Name is already taken");
                 alertView.numberOfButtons should equal(1);
@@ -106,7 +107,7 @@ describe(@"SettingsViewController", ^{
             });;
 
             it(@"should display a popup with the error message", ^{
-                UIAlertView *alertView = settingsViewController.currentAlertView;
+                UIAlertView *alertView = [UIAlertView currentAlertView];
                 alertView.title should equal(@"Error!");
                 alertView.message should equal(@"Name is already taken!");
                 alertView.numberOfButtons should equal(1);
@@ -165,7 +166,7 @@ describe(@"SettingsViewController", ^{
             });
 
             it(@"should bring up match information (opponent name, confirm, deny button)", ^{
-                UIAlertView *alertView = settingsViewController.currentAlertView;
+                UIAlertView *alertView = [UIAlertView currentAlertView];
                 alertView.title should equal(@"Opponent");
                 alertView.message should equal(@"Do you want to play bob");
                 alertView.numberOfButtons should equal(2);

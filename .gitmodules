@@ -4,3 +4,6 @@
 [submodule "AFNetworking"]
 	path = AFNetworking
 	url = https://github.com/AFNetworking/AFNetworking.git
+[submodule "Externals/PivotalCoreKit"]
+	path = Externals/PivotalCoreKit
+	url = git@github.com:pivotal/PivotalCoreKit.git

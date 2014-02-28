@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (weak, nonatomic) IBOutlet UISwitch *playSwitch;
 @property (strong, nonatomic, readonly) UIActivityIndicatorView *spinnerView;
-@property (strong, nonatomic, readonly) UIAlertView *currentAlertView;
 
 - (id)initWithAPIClient:(APIClient *)apiClient;
 - (id)initWithAPIClientandRunLoop:(APIClient *)apiClient timerRunLoop:(NSRunLoop *)timerRunLoop;

@@ -52,6 +52,8 @@
 		AE005D9418BC19D900431C00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89D7718B529EF00985020 /* AppDelegate.m */; };
 		AE005D9518BC19E500431C00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89DA218B55BC900985020 /* ViewController.m */; };
 		AE005D9818BD08BF00431C00 /* FakeAFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE005D9718BD08BF00431C00 /* FakeAFHTTPRequestOperationManager.m */; };
+		AE5148BA18C00F8700ED017C /* libUIKit+PivotalSpecHelper-StaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5148B518C00D6500ED017C /* libUIKit+PivotalSpecHelper-StaticLib.a */; };
+		AE66227318C011A100A43564 /* libUIKit+PivotalSpecHelperStubs-StaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5148B718C00D6500ED017C /* libUIKit+PivotalSpecHelperStubs-StaticLib.a */; };
 		AE684F9D18B56CED00501654 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684F9C18B56CED00501654 /* Counter.m */; };
 		AE684FA418B57DA700501654 /* HTAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA118B57DA700501654 /* HTAutocompleteTextField.m */; };
 		AE684FA618B57DA700501654 /* HTEmailAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE684FA318B57DA700501654 /* HTEmailAutocompleteTextField.m */; };
@@ -67,6 +69,37 @@
 		AEF89D7A18B529EF00985020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF89D7918B529EF00985020 /* Images.xcassets */; };
 		AEF89DA318B55BC900985020 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF89DA218B55BC900985020 /* ViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE5148B218C00D6500ED017C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE5148A818C00D6500ED017C /* UIKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEBCCC24168B999F0056EE83;
+			remoteInfo = "UIKit+PivotalCore-StaticLib";
+		};
+		AE5148B418C00D6500ED017C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE5148A818C00D6500ED017C /* UIKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEBCCC64168B9AF10056EE83;
+			remoteInfo = "UIKit+PivotalSpecHelper-StaticLib";
+		};
+		AE5148B618C00D6500ED017C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE5148A818C00D6500ED017C /* UIKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEC40C89174C203700474D2D;
+			remoteInfo = "UIKit+PivotalSpecHelperStubs-StaticLib";
+		};
+		AE5148B818C00D6500ED017C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE5148A818C00D6500ED017C /* UIKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEBCCC34168B99ED0056EE83;
+			remoteInfo = "UIKit-StaticLibSpec";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AE00584918B7D06C00431C00 /* Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Specs.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +146,7 @@
 		AE005D9218BC18FB00431C00 /* AppDelegateSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegateSpec.mm; sourceTree = "<group>"; };
 		AE005D9618BD08BF00431C00 /* FakeAFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeAFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
 		AE005D9718BD08BF00431C00 /* FakeAFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeAFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		AE5148A818C00D6500ED017C /* UIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UIKit.xcodeproj; path = Externals/PivotalCoreKit/UIKit/UIKit.xcodeproj; sourceTree = "<group>"; };
 		AE684F9B18B56CED00501654 /* Counter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Counter.h; sourceTree = "<group>"; };
 		AE684F9C18B56CED00501654 /* Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
 		AE684FA018B57DA700501654 /* HTAutocompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAutocompleteTextField.h; sourceTree = "<group>"; };
@@ -148,6 +182,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE66227318C011A100A43564 /* libUIKit+PivotalSpecHelperStubs-StaticLib.a in Frameworks */,
+				AE5148BA18C00F8700ED017C /* libUIKit+PivotalSpecHelper-StaticLib.a in Frameworks */,
 				AE00584C18B7D06C00431C00 /* CoreGraphics.framework in Frameworks */,
 				AE00584A18B7D06C00431C00 /* UIKit.framework in Frameworks */,
 				AE00585818B7D06C00431C00 /* Cedar-iOS.framework in Frameworks */,
@@ -257,6 +293,17 @@
 			path = AFNetworking/AFNetworking;
 			sourceTree = SOURCE_ROOT;
 		};
+		AE5148A918C00D6500ED017C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE5148B318C00D6500ED017C /* libUIKit+PivotalCore-StaticLib.a */,
+				AE5148B518C00D6500ED017C /* libUIKit+PivotalSpecHelper-StaticLib.a */,
+				AE5148B718C00D6500ED017C /* libUIKit+PivotalSpecHelperStubs-StaticLib.a */,
+				AE5148B918C00D6500ED017C /* UIKit-StaticLibSpec.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		AE684F9F18B57D8C00501654 /* HT */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +318,7 @@
 		AEF89D5B18B529EF00985020 = {
 			isa = PBXGroup;
 			children = (
+				AE5148A818C00D6500ED017C /* UIKit.xcodeproj */,
 				AEF89D6D18B529EF00985020 /* TeenFeedback */,
 				AE00584D18B7D06C00431C00 /* Specs */,
 				AEF89D6618B529EF00985020 /* Frameworks */,
@@ -392,6 +440,12 @@
 			mainGroup = AEF89D5B18B529EF00985020;
 			productRefGroup = AEF89D6518B529EF00985020 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AE5148A918C00D6500ED017C /* Products */;
+					ProjectRef = AE5148A818C00D6500ED017C /* UIKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AEF89D6318B529EF00985020 /* TeenFeedback */,
@@ -399,6 +453,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AE5148B318C00D6500ED017C /* libUIKit+PivotalCore-StaticLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libUIKit+PivotalCore-StaticLib.a";
+			remoteRef = AE5148B218C00D6500ED017C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AE5148B518C00D6500ED017C /* libUIKit+PivotalSpecHelper-StaticLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libUIKit+PivotalSpecHelper-StaticLib.a";
+			remoteRef = AE5148B418C00D6500ED017C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AE5148B718C00D6500ED017C /* libUIKit+PivotalSpecHelperStubs-StaticLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libUIKit+PivotalSpecHelperStubs-StaticLib.a";
+			remoteRef = AE5148B618C00D6500ED017C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AE5148B918C00D6500ED017C /* UIKit-StaticLibSpec.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "UIKit-StaticLibSpec.app";
+			remoteRef = AE5148B818C00D6500ED017C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AE00584718B7D06C00431C00 /* Resources */ = {
@@ -525,6 +610,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/**",
+					"$(SRCROOT)/Externals/PivotalCoreKit/path/to/specific/pckProject.xcodeproj/**",
 				);
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
 				OTHER_LDFLAGS = (
@@ -552,6 +638,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/**",
+					"$(SRCROOT)/Externals/PivotalCoreKit/path/to/specific/pckProject.xcodeproj/**",
 				);
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";

@@ -15,17 +15,12 @@
 @property (nonatomic) NSRunLoop *timerRunLoop;
 @property (nonatomic) NSTimer *timer;
 @property (strong, nonatomic, readwrite) UIActivityIndicatorView *spinnerView;
-@property (strong, nonatomic, readwrite) UIAlertView *currentAlertView;
 @end
 
 @implementation SettingsViewController
 
 - (id)initWithAPIClient:(APIClient *)apiClient {
-    self = [super init];
-    if (self) {
-        self.apiClient = apiClient;
-    }
-    return self;
+    return [self initWithAPIClientandRunLoop:apiClient timerRunLoop:[NSRunLoop mainRunLoop]];
 }
 
 - (id)initWithAPIClientandRunLoop:(APIClient *)apiClient timerRunLoop:(NSRunLoop *)timerRunLoop {
@@ -42,8 +37,7 @@
     return nil;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     [self.saveButton addTarget:self
                         action:@selector(buttonTouch)
@@ -77,8 +71,7 @@
                                                             message:error.userInfo[@"NSLocalizedDescription"]                                                         delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
-        self.currentAlertView = alertView;
-        [self.currentAlertView show];
+        [alertView show];
         [self.spinnerView stopAnimating];
         return nil;
     }];
@@ -110,21 +103,16 @@
         if (value[@"match_id"]) {
             [self.timer invalidate];
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Opponent"
-                                                                message:[NSString stringWithFormat:@"Do you want to play %@" , value[@"name"]]                                                        delegate:nil
-                                                      cancelButtonTitle:@"OK"
-                                                      otherButtonTitles:@"NO!",nil
-                                      ];
-            self.currentAlertView = alertView;
-            [self.currentAlertView show];
-
+                                                                message:[NSString stringWithFormat:@"Do you want to play %@" , value[@"name"]]
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"NO!"
+                                                      otherButtonTitles:@"OK", nil];
+            [alertView show];
         }
-
-
         return nil;
     } error:^id(NSError *error) {
         return nil;
     }];
-
 }
 
 #pragma mark - Private
@@ -133,10 +121,9 @@
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error!"
                                                         message:@"Name is already taken!"
                                                        delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-    self.currentAlertView = alertView;
-    [self.currentAlertView show];
+                                              cancelButtonTitle:nil
+                                              otherButtonTitles:@"OK", nil];
+    [alertView show];
     [self.spinnerView stopAnimating];
 }
 
@@ -146,10 +133,8 @@
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
-    self.currentAlertView = alertView;
-    [self.currentAlertView show];
+    [alertView show];
     [self.spinnerView stopAnimating];
-
 }
 
 @end
